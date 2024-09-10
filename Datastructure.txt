@@ -1,0 +1,165 @@
+import java.util.Scanner;
+
+public class Main {
+	static int totalEdge(int n) {
+		//logic
+		int totaledge=0;
+		totaledge=(n*(n-1))/2;	
+		return totaledge;
+	}
+
+	public static void main(String[] args) {
+		Scanner sc=new Scanner(System.in);
+		int n=sc.nextInt();
+		System.out.println(totalEdge(n));
+	}
+
+}
+
+import java.util.Scanner;
+
+public class Main {
+
+//Adjancy list in Graph 
+	public static void main(String[] args) {
+		Scanner sc=new Scanner(System.in);
+		
+		//read the number of test 
+		int t=sc.nextInt();//1
+		while(t-- > 0) {
+			//read the number of vertices and edges.
+			int v=sc.nextInt();
+			int e=sc.nextInt();
+			
+			
+			//create 2-d array to store the edges.
+			
+			int a[][]=new int[e][2];
+			
+			//read the edge and store in array 
+			for(int i=0;i<e;i++) {
+				a[i][0]=sc.nextInt();//0->start
+				a[i][1]=sc.nextInt();//1->ending vertext
+			}
+			
+			//for every vertext, we need to use adjancency list
+			
+			for(int i=0;i<v;i++) {
+				//print the vertex number
+				System.out.print(i);//0-->
+				
+				//check all the edges to find connections
+				
+				for(int j=0;j<e;j++) {
+					if(a[j][0]==i)
+						System.out.print("->"+a[j][1]);//starting of edge
+					if(a[j][1]==i)
+						System.out.print("->"+a[j][0]);//ending of edge
+				}
+				
+				System.out.println("\n");//next line
+			}
+			
+			
+		}
+		
+		
+	}
+
+}
+
+
+
+
+import java.util.HashMap;
+import java.util.Scanner;
+
+//implementation to hash data structure
+public class Main {
+	private HashMap<String, String> phonebook;
+	
+	//constrctor
+	public Main() {
+		phonebook=new HashMap<>();
+	}
+	
+
+	
+	//add entry to phone diary
+	public void addEntry(String name,String phoneNumber) {
+		phonebook.put(name, phoneNumber);
+	}
+	
+	
+	//remove entry to phone diary
+	
+	public void removeEntry(String name) {
+		phonebook.remove(name);
+	}
+	
+	
+	//get phone number by name
+	
+	public String getPhoneNumber(String name) {
+		return phonebook.get(name);
+	}
+	
+	
+	
+	//check if entry phone is exist or not 
+	public boolean isExist(String name) {
+		return phonebook.containsKey(name);
+	}
+
+	
+	
+	public static void main(String[] args) {
+		Main obj=new Main();
+		//add couple of data
+		
+		obj.addEntry("Lavish", "83647636364");
+		obj.addEntry("Magesh", "73647636364");
+		obj.addEntry("Niruj", "63647636364");
+		obj.addEntry("Ramya", "53647636364");
+		obj.addEntry("Sharan", "93647636364");
+		
+		//retrieve the data 
+		
+		System.out.println("Lavish Contacts no "+obj.getPhoneNumber("Lavish"));
+		System.out.println("Sharan Contacts no "+obj.getPhoneNumber("Sharan"));
+		System.out.println("Magesh Contacts no "+obj.getPhoneNumber("Magesh"));
+		System.out.println("Ramya Contacts no "+obj.getPhoneNumber("Ramya"));
+		System.out.println("Niraj Contacts no "+obj.getPhoneNumber("Niruj"));
+
+
+		//remove 
+		obj.removeEntry("Lavish");
+		
+		//check 
+		if(obj.isExist("Lavish")) {
+			System.out.println("Lavish is there in contact list");
+		}else {
+			System.out.println("Lavish doesn't exist in the contact list");
+		}
+		
+		
+	}
+
+}
+
+
+
+
+
+
+Competitive programming
+Input 
+Output
+
+
+
+
+
+
+
+

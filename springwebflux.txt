@@ -1,0 +1,85 @@
+No-SQL->Mongodb
+Services->CRUD operation->
+
+
+CRUD operation for given requirement using MongoDb data
+with Spring Webflux
+package->entity,dto,repository,service,controller
+entity->Product-> id,name,quantity ,price of the product.
+dto-->ProductDTo->contain all this fields
+helper->Convert entity to DTO and DTO to entity
+service->
+1.getProducts()->Flux
+2.getProduct()->to get single product->id->Mono
+3.saveProduct/creatProduct()->Mono
+4.updateProduct()->Mono
+5.deleteProduct()->Mono
+
+controller->5 controller use 
+
+single data->Mono->single data
+Many data->Flux
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

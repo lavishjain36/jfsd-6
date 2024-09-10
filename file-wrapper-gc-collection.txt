@@ -1,0 +1,341 @@
+a->97
+b->98
+
+
+abc
+acb
+bca
+
+A-65-lower
+a-97-greater
+
+
+Association->
+Byte->create Byte constructor and String
+
+Short->String
+Integer->String
+
+Equals->Object->
+
+Wrapper class immutable->Not changable ->
+String->Immutable->
+
+
+package com.garbageconcept;
+
+import java.util.ArrayList;
+import java.util.List;
+
+public class GarbageConcept {
+
+	public static void main(String[] args) {
+	
+		List<Person> pl=new ArrayList<>();
+		//to add person 
+	    
+		for(int i=0;i<1000;i++) {
+			pl.add(new Person("Person"+i,20+i ));
+		}
+		
+		//remove 600 person from the list
+		for(int i=0;i<500;i++) {
+			pl.remove(i);
+		}
+		
+		//500 person ->will be removed and they are eligible for gc
+		
+		System.gc();
+		
+		
+
+	}
+
+}
+
+
+package com.garbageconcept;
+
+public class Person {
+	
+	private String name;
+	private int age;
+	
+	public Person(String name, int age) {
+		super();
+		this.name = name;
+		this.age = age;
+	}
+
+	
+	@Override
+	public String toString() {
+		return "Person [name=" + name + ", age=" + age + "]";
+	}
+	
+	
+}
+
+package com.garbageconcept;
+
+public class Test {
+	
+//	public void finalize() {
+//		System.out.println("Object destroyed..");
+//	}
+
+	public static void main(String[] args) {
+		Test t1=new Test();
+		Test t2=new Test();
+
+		System.out.println(t1.toString());
+		System.out.println(t2.toString());
+		t1=null;
+		t2=null;
+//		System.gc();
+		
+		Runtime r= Runtime.getRuntime();
+		r.gc();
+
+	}
+
+}
+
+
+package com.garbageconcept;
+
+public class Test2 {
+
+	public static void main(String[] args) {
+		Test2 t1=new Test2();
+		System.out.println(t1);
+		
+		t1=null;//t1 object eligibel for gc
+		System.out.println(t1);
+
+	}
+
+}
+
+
+package com.fileoperation;
+
+import java.io.BufferedReader;
+import java.io.File;
+import java.io.FileReader;
+import java.io.FileWriter;
+import java.io.IOException;
+
+public class FileOperations {
+
+	public static void main(String[] args) throws IOException {
+	//Provide a path to file object 
+		String path="D:\\JavaConcept\\DemoJava\\hello.txt";
+		//create an object of file
+		
+		File file=new File(path);
+		
+		//write a data to file
+		//create a fileWriter object  and assign file obj to writer
+		FileWriter writer=new FileWriter(file);
+		
+		//if the file is created or not
+		boolean isFilecreated=file.createNewFile();
+		if(isFilecreated) {
+			System.out.println("File created successfully..");
+		}else {
+			System.out.println("File already exist...");
+		}
+		
+		writer.write("Hello People. Welcome to File Operations.Hope you are learning and doing good...");
+		
+		
+		//close the writer object
+		writer.close();
+		System.out.println("data successfully added to file...");
+		
+		
+		//File Reader.
+		FileReader reader=new FileReader(file);
+		//BufferReader->reads the data text by text line by line
+		
+		BufferedReader br=new BufferedReader(reader);
+		
+		String result;
+		
+		//loop
+		while((result=br.readLine()) != null) {
+			System.out.println(result);
+		}
+		br.close();
+		System.out.println("Data readed successfully.");
+	}
+
+}
+
+
+
+package com.wrapperconcept;
+
+public class Employee {
+	
+	//3 field->id,name and salart
+	private Integer id;
+	private String name;
+	private Double salary;
+	
+	public Employee(Integer id, String name, Double salary) {
+		super();
+		this.id = id;
+		this.name = name;
+		this.salary = salary;
+	}
+	//Alt+shift+s
+	
+	//instance ->private
+	//static=->private
+
+	public Integer getId() {
+		return id;
+	}
+
+	public void setId(Integer id) {
+		this.id = id;
+	}
+
+	public String getName() {
+		return name;
+	}
+
+	public void setName(String name) {
+		this.name = name;
+	}
+
+	public Double getSalary() {
+		return salary;
+	}
+
+	public void setSalary(Double salary) {
+		this.salary = salary;
+	}
+
+	//Object class->toString()->return hashcode value object
+	@Override
+	public String toString() {
+		return "Employee [id=" + id + ", name=" + name + ", salary=" + salary + "]";
+	}
+	
+
+
+}
+
+
+package com.wrapperconcept;
+
+public class EmployeeMain {
+
+	public static void main(String[] args) {
+		Employee emp1=new Employee(101,"Jagan",50000.0);
+		Employee emp2=new Employee(102,"Mohan",80000.0);
+		Employee emp3=new Employee(103,"Suman",150000.0);
+
+		System.out.println(emp1);
+		System.out.println(emp2);
+		System.out.println(emp3);
+		
+		Integer i1=new Integer(10);
+		System.out.println(i1);
+		
+		Integer i2=new Integer(10);
+		System.out.println(i2);
+//		Integer i3=new Integer("Ten");//String
+//		System.out.println(i3);
+		
+		System.out.println(i1.equals(i2));//true->content 
+		System.out.println(i1==i2);//false
+	    System.out.println(i1.hashCode()==i2.hashCode());
+	    
+//	    String->equals
+	    
+//	    String ->String constant pool
+
+	}
+
+}
+
+
+package com.wrapperconcept;
+
+public class TestWrapper {
+	
+	
+	public static void main(String[] args) {
+		
+		//converting->Primitive->Object level->Autoboxing or Wrapping
+		//variable->primitive 
+		int num=20;
+		double value=10.43;
+		boolean flag=true;
+		
+		//convert this into Wrapper class->1.5
+		
+		Integer wnumber=Integer.valueOf(num);//object 
+		Double wvalue=Double.valueOf(value);
+		Boolean wflag=Boolean.valueOf(flag);
+		
+		System.out.println(num);
+		System.out.println(wnumber);
+		System.out.println(value);
+		System.out.println(wvalue);
+		System.out.println(flag);
+		System.out.println(wflag);
+		
+		//unboxing
+		//convert into primitive 
+		int unwrapnum=wnumber.intValue();//auto-unboxing
+
+		System.out.println(unwrapnum);
+	}
+
+}
+
+
+A file path->
+File->
+1.create a file objectp->
+File file=new File();
+2.write data into file
+3.Read the data from a file
+4.close the file.
+
+D:\JavaConcept\DemoJava\hello.txt-path to file object
+
+
+final(keyword) vs finally(block->exception) vs finalize->gc.
+
+
+Internationlization-18N
+
+java Data & Time api
+Java calender->API
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

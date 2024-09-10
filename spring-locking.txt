@@ -1,0 +1,56 @@
+Spring Locking Mechanism
+What is Locking?
+JPA->
+2 types locking mechanism:
+@Transaction
+1.optimistic locking->@version
+2.pessimistic locking->
+@Lock()
+implementation of locking mechanism
+
+User scenario->Online Bus ticket ->
+User can reserve seat on bus.
+Each bus has limited number of seats and multiple user trying to access/book the tickt
+for same bus at the same time.
+Entity->
+Bus->
+Ticket->
+
+High concurrency->
+Optimistic
+data conflict
+Low Concurrency-
+Pessimistic
+data conflict->rare
+Locking->it controls access to dabase resource,
+when multiple concurrent transaction made, we need
+to ensure the data integrity.
+
+transaction lock a record .
+
+JPA_> 2type of locking
+1.Optimistic->both user can start transaction
+without waiting at the same time.
+2.Pessimistic:
+one user with waiting , ->
+longer time and reduced concureency
+
+Both the transaction happens simultaneously->data integrity,conflict issue
+
+Bank account transaction->Pessmis
+Auction bidding-> optimiss.
+
+Online booking->pessimistic->1 and wait
+2 ->booking ticket
+
+Thymleaf->
+
+
+
+
+
+Spring +Thymleaf template engine 
+What is Thymleaf?
+Expression used in thymleaf
+maven depdency and integration
+Spring+Thymleaf+Database->

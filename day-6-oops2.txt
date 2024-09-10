@@ -1,0 +1,356 @@
+Intro to OOP in Java
+Classes, fields, methods, constructors
+this keyword->to access members of current class.
+Modifiers:public,protected ,private,default.
+static->it is keyword->part of class
+final->it is keyword->final to class->
+Interfaces & Inheritance
+super keyword
+
+Methods in java ->
+Banking->
+Withdrawal
+Depost
+transfer
+change password-user
+
+Method->it contains set of instruction to perform and write business logics.
+Method->
+1.name
+2.input(parameters)
+3.body
+4.return type
+
+
+
+Develop a class in java that should have 
+method->addition operation.
+
+
+
+static:the static keyword is used for memory management.
+static->class
+usecase->variable ,methods,block and nested class.
+1.variable->class  variable
+2.method->class method
+3.block 
+4.nested class
+
+class{
+static variable
+static block
+static method
+non-static variable(instance)
+instance block
+instance method
+}
+
+static variable->accessed inside static block,static method.
+instance or non-static->acessed in object creation.
+
+
+Why instance variable are not accessed in static block and method?
+static->static->Friend
+static->instance->enemy
+instance->instance->friend
+instance->static->enemy
+
+static->space that is used by one 
+instance->new space is created
+
+
+
+
+conclude:Static 
+1.to creare static ->static keyword
+2.When memory is allocated to static variable?
+Allocated memory during class loading.
+3.Memory allocated in=Heap memory area
+4.memory allocated for only once in heap area.
+5.one copy of static variable is shared and used by all the object.
+6.call static variable ->Classname
+7.static variable are object dependent .
+8.static ->inside static and non static elements.
+
+
+
+instance:
+1.call ->by creating object
+2.call->object reference .
+3.object dependent->Yes
+
+
+package com.oops.basic.inheritance;
+
+//class-1st-Parent class 
+class A{
+	String name="swapnil";
+	int age=38;
+	
+	void display() {
+		System.out.println("Name:"+name+" "+"Age: "+age);
+	}
+}
+
+//established relation b/w class A and B->Inheritance-
+//Child class
+class B extends A {
+	String city="Pune";
+	
+	void display() {  	  
+	System.out.println(city);
+	}
+}
+
+//ambiguity->Diamond
+class C extends B{
+	//A and B->will transferred to C
+}
+public class Main {
+	public static void main(String[] args) {
+		//create an object of class B
+		A obj=new A();
+		obj.display();
+		
+		B obj1=new B();
+		obj1.display();
+
+	}
+}
+
+package com.oops.basic.calculator;
+
+public class Calculator {
+	int num1,num2,num3;//instance variable
+	
+	//instance method-addition
+	int add() {
+		num1=10;
+		num2=20;
+		num3=num1+num2;//addition logic
+		return num3;
+	}
+	
+	//develop a method subtraction
+	int subtract() {
+		num1=10;
+		num2=5;
+		num3=num1-num2;
+		return num3;
+	}
+
+	public static void main(String[] args) {
+		
+		//create an object of the class
+		Calculator calc=new Calculator();//object creation
+		
+		//call the method->objereference.methodname();
+		System.out.println(calc.add());
+		
+		System.out.println(calc.subtract());
+
+	}
+
+}
+
+
+package com.oops.basic.calculator;
+
+public class Calculator2 {
+	int num1,num2,num3;//instance variable
+	
+	//instance method-addition
+   int add(int num1,int num2) {
+		num3=num1+num2;//addition logic
+		return num3;
+	}
+
+		
+	
+	//develop a method subtraction
+	int subtract(int num1,int num2) {
+		num3=num1-num2;
+		return num3;
+	}
+
+	public static void main(String[] args) {
+		
+		//create an object of the class
+		Calculator2 calc=new Calculator2();//object creation
+		
+		//call the method->objereference.methodname();
+		System.out.println(calc.add(10,20));//parameter
+		
+		System.out.println(calc.subtract(20,7));
+
+	}
+
+}
+
+
+package com.oops.basic.calculator;
+
+public class Demo {
+	//static variable
+	static int a;
+	static int b;
+
+
+	//static method 
+	static void display() {
+		System.out.println("Static Method");
+		System.out.println(a);
+		System.out.println(b);
+	}
+	
+	//instance variable
+	int x;
+	int y;
+	
+	//non-static method 
+	{
+		System.out.println("Non-Static block or instance block");
+		x=30;
+		y=40;
+	}
+	
+	//constructor
+	Demo(){
+		System.out.println("Constructor");
+	}
+	
+	//instance method
+	void display1() {
+		System.out.println("Non static methor or instance method");
+		System.out.println(x);
+		System.out.println(y);
+
+	}
+	
+	//static block
+	static {
+		System.out.println("Static Block");
+		a=10;
+		b=20;
+	}
+	//main method
+	public static void main(String[] args) {
+		
+		//execution start from main method
+		
+//		Demo.display();//acess static elements
+		
+//		Demo d=new Demo();//access non-static elements
+//		d.display1();
+		
+		//create object
+		Demo d=new Demo();
+		System.out.println(d.x);//instance 
+		System.out.println(d.y);//instace variable
+
+	}
+
+}
+
+
+package com.oops.basic.calculator;
+
+public class Demo1 {
+	//instance variable
+	int a;
+	int b;
+
+	//instance variable
+	 static int count;
+	 //instance block
+	 {
+		 System.out.println("Static block");
+		 count++;
+	 }
+	
+	//constructor-1
+		Demo1(){
+			//intialization of values
+		}
+	
+	//constructor-2
+		Demo1(int a){
+			//intialization of values
+			this.a=a;
+		}
+		
+//constructor-2
+		Demo1(int a,int b){
+			//intialization of values
+			this.a=a;
+			this.b=b;
+		}
+	public static void main(String[] args) {
+		Demo1 d1=new Demo1();
+		Demo1 d2=new Demo1();
+		Demo1 d3=new Demo1();
+		
+		System.out.println(Demo1.count);//direct acesss
+
+	}
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

@@ -1,0 +1,289 @@
+https://java-8-tips.readthedocs.io/en/stable/streamsapi.html
+Functional Programming approach->
+WAP to find the sum of even number in given data using Collection API and streams.
+input:
+5
+1 2 3 4 5
+
+Output:
+6
+
+output:
+package com.problemsolving;
+
+import java.util.ArrayList;
+import java.util.Arrays;
+import java.util.Collections;
+import java.util.LinkedHashSet;
+import java.util.List;
+import java.util.Map;
+import java.util.Scanner;
+import java.util.Set;
+import java.util.Vector;
+import java.util.regex.Pattern;
+import java.util.stream.Collectors;
+
+public class Main {
+    public static void main(String[] args) {
+        Scanner sc=new Scanner(System.in);
+        int num=sc.nextInt();//5
+        
+        List<Integer> list=new ArrayList<>();//1 2 3 4 5
+    
+        //reading the data 
+        for(int i=0;i<num;i++) {
+        	list.add(sc.nextInt());
+        }
+        
+        //sum of even numbers
+    int sumofeven= 
+		    		list.stream().
+		    		filter(x->x%2==0)
+		    		.mapToInt(Integer::intValue)
+		    		.sum();
+    
+    System.out.println(sumofeven);
+    
+        
+    }
+    
+}
+
+
+2.String problem:
+WAP to count the starting letter specific letter.
+Testcase-1
+input:5
+apple banana Apple cat
+a
+
+Output
+2
+
+
+package com.problemsolving;
+
+import java.util.ArrayList;
+import java.util.Arrays;
+import java.util.Collections;
+import java.util.LinkedHashSet;
+import java.util.List;
+import java.util.Map;
+import java.util.Scanner;
+import java.util.Set;
+import java.util.Vector;
+import java.util.regex.Pattern;
+import java.util.stream.Collectors;
+
+public class Main {
+    public static void main(String[] args) {
+        Scanner sc=new Scanner(System.in);
+        int num=sc.nextInt();//5
+        
+        List<String> list=new ArrayList<>();
+        
+        //read the input
+        for(int i=0;i<num;i++) {
+        	list.add(sc.next());
+        }
+    
+        char chaar=sc.next().charAt(0);
+    
+        long count=list.stream()
+        		.filter(l->l.toLowerCase().charAt(0)==Character.toLowerCase(chaar))
+        		.count();
+        
+        System.out.println(list);
+        System.out.println(count);
+    }
+    
+}
+
+WAP to print the given input and expected output.
+input:
+5
+Pune Chennai bengaluru delhi mumbai
+
+output:
+PUNE CHENNAI BENGALURU DELHI MUMBAI
+
+package com.problemsolving;
+
+import java.util.ArrayList;
+import java.util.Arrays;
+import java.util.Collections;
+import java.util.LinkedHashSet;
+import java.util.List;
+import java.util.Map;
+import java.util.Scanner;
+import java.util.Set;
+import java.util.Vector;
+import java.util.regex.Pattern;
+import java.util.stream.Collectors;
+
+public class Main {
+    public static void main(String[] args) {
+        Scanner sc=new Scanner(System.in);
+        int num=sc.nextInt();//5
+        
+        List<String> list=new ArrayList<>();
+        
+        //read the input
+        for(int i=0;i<num;i++) {
+        	list.add(sc.next());
+        }
+        
+        //logic to convert from lc->uc
+	    List<String> res= list.stream()
+	    		.map(String::toUpperCase)
+	    		.collect(Collectors.toList());
+    
+	    res.forEach(System.out::println);
+    }
+    
+}
+
+
+
+
+Q.WAp to reverse string using collection and streams
+input:
+Testcase-
+2
+Lavish Jain
+
+Output
+hsivaL niaJ
+
+1.take input list of strems->map function->StringBuilder-reverse 
+
+
+
+Q.Anagrams:
+WAP to check if 2 strings are anagram or not.
+input:
+   listen
+silent  
+
+Output:
+Anagrams
+
+
+
+package com.problemsolving;
+
+import java.util.ArrayList;
+import java.util.Arrays;
+import java.util.Collections;
+import java.util.LinkedHashSet;
+import java.util.List;
+import java.util.Map;
+import java.util.Scanner;
+import java.util.Set;
+import java.util.Vector;
+import java.util.regex.Pattern;
+import java.util.stream.Collectors;
+
+public class Main {
+    public static void main(String[] args) {
+        Scanner sc=new Scanner(System.in);
+        
+        String str1=sc.nextLine();//listen
+        String str2=sc.nextLine();//silent
+        
+        //remove white spaces.
+        String newstr1=str1.replaceAll("\\s", "").toLowerCase();
+        String newstr2=str2.replaceAll("\\s", "").toLowerCase();
+
+        //check if the length is same 
+        if(newstr1.length()!=newstr2.length()) {
+        	System.out.println("Not Anagrams");
+        	return;
+        }
+        
+        
+        //convert the string into char array and sort
+        char [] array1=newstr1.toCharArray();
+        char [] array2=newstr2.toCharArray();
+        Arrays.sort(array1);
+        Arrays.sort(array2);
+        
+        if(Arrays.equals(array1, array2)) {
+        	System.out.println("Anagram");
+        }else {
+        	System.out.println("Not Anagram..");
+        }
+
+
+    }
+    
+}
+
+
+WAP to read the list of integer input from users ,Merge them,remove duplicate 
+and sort them in ascending order and print the sorted list
+
+input :3
+List1:
+10 5 8
+input:4
+List2:
+8 5 3 12
+
+Output:
+Sorted:
+[3,5,8,10,12]
+
+
+
+
+
+package com.problemsolving;
+
+import java.util.ArrayList;
+import java.util.Arrays;
+import java.util.Collections;
+import java.util.LinkedHashSet;
+import java.util.List;
+import java.util.Map;
+import java.util.Scanner;
+import java.util.Set;
+import java.util.Vector;
+import java.util.regex.Pattern;
+import java.util.stream.Collectors;
+import java.util.stream.Stream;
+
+public class Main {
+    public static void main(String[] args) {
+        Scanner sc=new Scanner(System.in);
+        //list-1
+        int n1=sc.nextInt();
+        List<Integer> list1=new ArrayList<>();
+        
+        for(int i=0;i<n1;i++) {
+        	list1.add(sc.nextInt());
+        }
+        //list-2
+        int n2=sc.nextInt();
+        List<Integer> list2=new ArrayList<>();
+        
+        for(int i=0;i<n2;i++) {
+        	list2.add(sc.nextInt());
+        }
+        
+        //Merge list->Remove duplicate -->Sort the list
+        List<Integer> mergedlist=Stream
+        		.concat(list1.stream(), list2.stream())
+        		.distinct()
+        		.sorted()
+        		.collect(Collectors.toList());
+        
+        System.out.println(mergedlist);
+        
+    }
+    
+}
+
+
+
+

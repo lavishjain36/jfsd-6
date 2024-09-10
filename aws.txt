@@ -1,0 +1,272 @@
+What is Cloud?
+Data-?
+File management
+pendrive/harddriver
+Computer storage
+
+
+Application->10LAC Users->
+Buy Hardware->1000s of Big machine,
+ram,good processor and configuration.
+
+
+Need to hire people->
+Purchase big rooms for server management-
+
+
+Cloud->100 machine->
+16 GB or 32 Gb
+memory storage
+graphic
+
+public ,private cloud-
+
+public cloud->storage ->5 TB ->
+database,server,security,configuration
+->
+
+
+Private cloud->
+services are accessible to only people of the 
+company or organization ->
+
+
+Hybrid cloud->
+
+
+USA /Silicon valley->1000 Machine+1000 Employees+Storage ,space
+
+Aws-> Region->From which Region?
+Hyderbad
+Mumbai
+
+24->
+
+
+
+Cloud->internet +Storage
+
+ sudo rpm --import https://yum.corretto.aws/corretto.key 
+ sudo curl -L -o /etc/yum.repos.d/corretto.repo https://yum.corretto.aws/corretto.repo
+sudo yum install -y java-11-amazon-corretto-devel
+
+sudo yum install -y java-17-amazon-corretto-devel
+sudo yum install -y java-21-amazon-corretto-devel
+
+spring boot->java-17
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Read->BOok->Oreely by java
+
+Cloud->internet
+
+100->customer,
+1000->custoner
+1lac->customer
+10lac->customer
+30lac->across->world
+
+Pay-as-you go for service purchase.
+
+
+4gb->Cloud vendor->
+
+AWS->Amazon web service
+Azure->by microsoft
+GCP->google cloud provider
+Alibaba->
+
+
+Cloud->3 type
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Spring boot application deployment on Cloud using AWS(Amazon Web services):
+
+What is Cloud?
+What is Cloud-AWS ?
+How to setup an account using AWS -Root account?
+Free tier->750+hours approx free cost->
+Debit Card->1rs->credit 
+Root->user->Main
+
+IAM->Identity and access management->IAM->
+Ecommerce->
+production=>
+
+putty
+moba-xterm
+
+ec2 instance 
+connect ec2 using ssh-(Mobaxterm/putty)
+putty private key-ppk
+
+S3 bucket and deployment an application->
+
+
+
+Services->
+1.Ec2 instance->Elastic cloud computing(EC2)->
+Amazon->Ec2 service->instance->Linux,Amaon linux,Windows,mac
+2.SSH->connect ec2 to you ssh connection ->Putty/Mobaxterm.
+
+3.How to spin up Linux server->
+
+2.S3->service->
+How to upload project to S3 bucket?
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

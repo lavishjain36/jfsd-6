@@ -1,0 +1,119 @@
+username:
+jainmonula1
+
+pwd:
+mhyjPGOVOfInFtQO
+
+
+mongodb+srv://jainmonula1:mhyjPGOVOfInFtQO@cluster0.dvagkby.mongodb.net/
+
+
+spring:
+  data:
+    mongodb:
+      host: localhost
+      port: 27017
+      database: jfsdb
+      url: mongodb+srv://jainmonula1:mhyjPGOVOfInFtQO@cluster0.dvagkby.mongodb.net/jfsspringmongo
+    database: Taskdb
+
+
+mongodb+srv://jainmonula1:mhyjPGOVOfInFtQO@cluster0.dvagkby.mongodb.net/
+
+
+Spring Mongo Integration
+
+What is Spring Mongodb ?
+Connect->Spring boot application Mongodb data using
+
+Spring+Mongodb Cloud database(Atlas)
+
+
+Mongo Atlas-> mongo url->
+
+MongoTemplate class->
+MongoRepository interface->if we want to perform->
+CREATE,READ,UpDAte,DELETE
+
+
+
+
+Creating of mongodb url
+Connecting atlas url to mongodb compass.
+
+1.Create Spring-mongodb project->Spring initializer
+2.Add a dependency :
+spring web
+spring mongodb
+lombok->reduce boilerplate 
+
+Create a project->
+model/entity
+
+Task class->
+taskid,
+
+
+controller
+service
+repository
+
+
+1.creating model class
+2.create repository interface
+MongoRepository->CRUD->
+3.Inject repository layer into service and we need use those service
+
+
+
+locking:
+
+Ticket->
+Railway
+Redbus
+
+3 people-cab
+->
+Sride/Eco->
+magesh
+Dhnaush
+Ramya
+Lavish
+
+Optimisstic and pessimistic locking
+Duplication of data
++Thymleaf
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

@@ -1,0 +1,265 @@
+Live server->
+html,css and js website without taking path
+manually.
+Prettier - Code formatter
+
+
+<!DOCTYPE html>
+<html>
+    <head> 
+        <title>Landing Page</title>
+        <link rel="stylesheet" href="./style.css">
+    </head>
+
+
+
+
+    <body>
+        <h1 id="test">Lavish</h1>
+        <p class="para1">Lorem ipsum dolor sit amet consectetur adipisicing elit. Cupiditate numquam officia cumque voluptas facere, unde impedit aut quidem culpa, nulla odit commodi iste sed enim eius tenetur illo hic velit.</p>
+
+        <p class="para1">Lorem ipsum dolor sit amet consectetur adipisicing elit. Iure, quaerat vitae. Laborum quo soluta odio molestias eligendi, quis qui omnis. Facere rerum totam neque commodi quia ipsa itaque! Necessitatibus, rerum.</p>
+
+        <h1>Lavish</h1>
+        <h2>Lavish</h2>
+        <h3>Lavish</h3>
+        <h4>Lavish</h4>
+        <h5>Lavish</h5>
+        <h6>Lavish</h6>
+
+        <a href="https://google.com">Click Here</a>
+        <a href="./Home.html" style="color: red;text-decoration: none;">Home Page</a>
+    </body>
+
+</html>
+/* Universal ->reflect to entire page  */
+*{
+    margin: 0;
+    padding: 0;
+}
+
+/* //id->unique attribute  */
+#test{
+    background-color: blue;
+}
+
+
+
+/* //class name->. common to group  *
+.para1{
+    border: 2px solid black;
+    padding: 20px;
+    margin: 10px;
+}
+
+
+/* selecting html tag or element  */
+h1{
+    font-size: 40px;
+    background-color: skyblue;
+    width: 200px;
+    height: 100px;
+    border:1px dashed red;
+
+}
+
+Creating forms in HTML :
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form Elements </title>
+</head>
+<body>
+    
+    <form action="#" name="enrollementForm" method="post">
+        <label for="firstname">FirstName</label>
+        <input type="text" name="firstname" placeholder="Enter your FirstName" id="firstname"/>
+
+        <br> <br>
+
+        <label for="lastname">Lastname</label>
+        <input type="text" name="lastname" placeholder="Enter your Lastname" id="lastname"/>
+
+        <br> <br>
+
+        <label for="email">Email</label>
+        <input type="email" name="email" id="email"  placeholder="Enter your Email id"/>
+
+        <br><br>
+
+        <label for="password">Password</label>
+        <input type="password" name="password" id="password" >
+
+
+        <br><br>
+        <label for="dob">DOB</label>
+        <input type="date">
+
+        <br><br>
+        <label for="">Upload</label>
+        <input type="file">
+        
+        <br><br>
+        <label for="">Gender</label>
+        <input type="radio" name="gender" id="male" value="Male">Male
+        <input type="radio" name="gender" id="female" value="Female">Female
+        <input type="radio" name="gender" id="Other" value="Other">Other
+
+
+        <br><br>
+        <label for="">Hobbies</label>
+        <input type="checkbox" name="music" id="music" value="music"> Music
+        <input type="checkbox" name="sports" id="sports" value="sports"> sports
+        <input type="checkbox" name="reading" id="reading" value="reading"> Reading
+
+        <br><br>
+        <label for="">Country</label>
+        <select name="country" id="country" >
+            <option value="">India</option>
+            <option value="">Australia</option>
+            <option value="">USA</option>  
+            <option value="">China</option> 
+            <option value="">Japan</option> 
+            <option value="">Vietnam</option>
+        </select>
+
+        <br><br>
+        <input type="submit">
+    </form>
+</body>
+</html>
+
+Frontend- Day -1           
+Fronend Development:
+                                                                                                                                                                    HTML 
+Introduction to HTML & basic tags
+HTML forms & it’s elements
+CSS - Cascading style sheet.
+Types of CSS
+inline 
+internal
+External->
+Recommended->External css
+ & usage
+Types of stles, flex
+universal->*
+class selector->.classname
+id selector->#idname
+tag selector-> tagname->p
+input
+h1
+
+
+
+
+
+
+
+
+
+
+HTML CSS Javascript
+HTML->provide structure and show content of web page
+CSS->enhance presentation, good look and feel.
+Human ->body+look +color+everything->Movement.?
+JS->Javascript->interactivity and dynamic
+
+HTML->simple house bricks& stone
+CSS->Furnishing the things->color,furniture ,POP
+JS->Fan,light,water imp. source of living.
+
+Document Object MODEL-DOM Model
+Tree like
+
+it is combing stack to develop a website or webpages for our application.
+
+HTML->
+Hyper text markup language.
+create web pages for our website.
+describe the content of your web page.
+
+HTML->DOM->
+tags or elements->
+<!Doctype>
+<h1> Your info<h1/>
+
+<p>Paragraph</p>
+
+
+CSS->
+Internal css
+<style>
+
+</style>
+
+External CSS
+Inline CSS
+
+
+Block level->any element which occupy new line to print 
+
+Inline->any element which uses same line to print the next 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

@@ -1,0 +1,74 @@
+Spring Annotation
+Spring IOC & Beans
+Dependency Injection
+Blocking & Non-blocking web stacks
+
+
+@Component->
+Spring bean /component=>
+beans->object
+you class is spring bean/component.
+it will inform spring container automatically create spring bean for your application.
+
+Spring IOC->Inversion of Control->
+it will take care creating beans . we don't have to create object
+using new keyword explicitly
+
+@COmponent  annotation->creating spring bean automatically in Spring Container.
+
+Bean Scope->
+bean->object of scope->
+bean scope is used to define lifecycle of bean.
+6  type of scope provided by Spring->
+1.Singleton->it is scope which provides one instance of the bean which is created and it will
+shared across entire application.->
+Hashcode->same hashcode
+
+2.Prototype->new instance of the bean everytime in prototype bean scope
+different hashcode
+
+@Scope
+
+3.Request->new instance of the bean will created fo each http request.
+4.Session ->new instance of the bean will created for each http session.
+
+5.Application
+6.WebSocket
+DESIGN patterns:
+
+
+@Scope("name")->to specify the scope of bean .
+
+
+
+
+@Value ->
+
+
+Dependency Injection:it is design pattern to inject objects/beans.
+1.constructor,setter ,field injections.
+@Autowired
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+DI->
+Autowired
+
+
+

@@ -1,0 +1,81 @@
+Spring Batch Process:
+What is Spring Batch?
+Need of Batch process
+Key components:
+Working flow of Batch process
+Interface provided->Batch processing
+Implementation.
+
+-->Process large amount data from one mode to other mode.
+
+Spring JMS
+Database access using R2DBC
+
+Job Launcher->it is responsible to start and manage the execution of the job.
+SimpleJobLauncher.
+2.X->
+
+
+JobRepository->it is interface for acessing the data .
+ItemReader->provide the retireve the data from data source.
+bean->FlaFileItemReader->read()
+
+Itemprocess->process()->apply or write our business logic.
+Large amount->extract filter->
+CustomerProcess processor() implements ItemProcessor
+ProductProcessor processor()
+
+ItemWriter->write process data from one source to the destination.
+write()
+
+
+2.X
+JobBuilderFactory
+StepBuilderFactory
+remove this 2 things->spring batch community easier approach 
+
+
+Spring JMS
+Database access using r2dbc
+Testinga and Debugging.
+
+
+
+
+
+
+
+src/main/resources/customers.csv
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Spring Batch is one of core module of the Spring Framework  with the 
+help of which Spring batch allows us process the millions of recording in 
+lesser time.
+
+Batch processing->it can execute series of task or operation as 
+batch job.
+Ex: Large volume of the data 
+    large complex operation with data.
+
+    Process a Large amount of data available in .csv or excel 
+which want to store in Database.
+->SPring Batch Processing.
+
+insert->query
+Save our time 
+
+Export the data from this file to our database.

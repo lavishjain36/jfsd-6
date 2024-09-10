@@ -1,0 +1,110 @@
+import java.util.Scanner;
+public class Main {
+    public static void main(String[] args) {
+        
+        Scanner sc=new Scanner(System.in);
+        
+        //size of the array
+        int size=sc.nextInt();//5->
+        
+        //need to create space for storing elements in heap 
+        int[] array=new int[size];
+        
+        //Read the array element from user->8 5 6 2 3
+        for(int i=0;i<size;i++){
+            array[i]=sc.nextInt();//8 5 6 2 3
+        }
+        
+        //print element
+        for(int i=0;i<size;i++){
+            System.out.print(array[i]+" ");//8 5 6 2 3
+        }
+        
+     
+    }
+}
+
+group of 3 elements->
+windo of 3 size of elements
+
+[1,-2,-3]->first negative->?
+[-2,-3,-4]=>First negative
+[-3,-4,-5]=-3
+[-4,5,6]=
+[5 6 -7]=
+
+
+10-3=>7
+
+
+
+use->note that element->0
+
+Output:
+[-2 -2 -3 -4 -7]
+
+1.develop ->element<0
+
+
+Window size:
+import java.util.Scanner;
+public class Main {
+    public static void main(String[] args) {
+        
+        Scanner sc=new Scanner(System.in);
+        
+        //size of the array
+        int n=sc.nextInt();//7
+        
+        //create space 
+        int[] array=new int[n];
+        
+        //read 
+        for(int i=0;i<n;i++){
+            array[i]=sc.nextInt();
+        }
+        
+        //window size->
+        int k=sc.nextInt();//3
+    
+        //Logic-i=0,i<=7-3=4=>0<=4 
+        for(int i=0;i<=n-k;i++){
+            boolean isNegative=false;
+            //Loop through each element in given window->j=0,0+3=>0<3
+            for(int j=i;j<i+k;j++){
+                //negative 
+                if(array[j]<0){
+                    System.out.print(array[j]+" ");
+                    isNegative=true;
+                    break;//inser loop as soon we get first negative
+                }
+            }
+            
+            if(!isNegative){
+                System.out.print("0 ");
+            }
+            
+        }
+        
+     
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

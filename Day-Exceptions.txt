@@ -1,0 +1,129 @@
+Exception Handling
+Collection Framework:
+Comparable & Comparator
+File Handling->
+Memory management and garbage collection
+
+
+
+
+Exception:
+Bike->Outstation visit->Office->50km
+Started journey home->25km-> Destination.
+
+1.tyre gets punctured?
+1.come back to your home and take leave
+2.you keep your vehicle in middle of road and then leave place to reach office.
+3.you keep your vehicle in paid parking saftely nearby and then from you take bus/cab -travel to office.
+
+100lines->
+30-lines->
+31->line->problem->
+
+
+Practical->
+ATM machine->
+insert the card->connect is established.later you perform activity
+//after doing activity ->we terminate connect smoothly.
+
+//1.establish connection
+//2.activity
+//3.terminate those services
+
+withdraw->
+500->
+Five hundred rs.
+
+try -catch block->
+try and catch->
+try->risky code
+try{
+//code.
+}catch(){
+//provide message 
+}
+throw->it used to throw an  exception in java.
+
+
+throws->it is used to declare an exception-
+
+Min Marriage:
+21>
+
+
+IllegalArgumentException .
+
+
+
+18->only eligible for voting
+
+
+
+
+
+UserDefined->or customized->
+Are user created exception to manage the application exception.
+InvalidAgeException?
+InvalidTicketException?
+
+
+Fileshandling or Collection Framework  -Garbage collection.
+
+
+html,css and js and Ecmscript->
+html,css and js ->pure=JSP
+React.js->Materialzed css,Semantic Ui,Mui 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Spring boot>Java
+Java FUllstack developer->Fullstack developer.
+
+Spring container
+Spring ioc
+Spring DI
+spring framework
+Spring test
+
+
+
+
+
+
+
+
+

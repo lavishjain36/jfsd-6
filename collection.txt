@@ -1,0 +1,140 @@
+List(I)->ArrayList,LinkedList.
+Queue(I)->Priority,ArrayDequeue
+Set(I)->TreeSet,HashSet,LinkedHashSet
+
+Collection->import java.util.*;->import everythings
+
+In Collection->Every data stores as an object data.
+
+1.ArrayList(C)->
+inbuilt class->Collection API(Application programming interface).
+Store data in memory ->ArrayList->List interface(import list interface).
+
+Insertion ,deleteion
+Duplicate ->10,20,10,20
+Size of array list growable based on data.
+add()->method
+
+
+2.LinkedList(C)->
+
+Node->1.data 2.address to next node.
+Linked list which can store homogenous and hetregenous data like 
+it stores in datatstructure
+
+When we want to add the data ->No shifting takes places->
+add new node and link with previous node.
+
+addFirst();->adding element in first
+addLast();->adding element to last
+
+
+
+
+4 patient->
+
+2.Patient->Minor injury
+1.Patiend->moderate.
+3.Patient->Critical
+
+
+Queue->
+Simple ex:
+SET->to store group of element  which are unique element
+
+
+
+Set->
+a group of unique values.
+index is not possible in set
+
+
+
+Key-value-
+
+Key-
+101->index->in hash table->Lavish
+102->index->Lavish/Dhanush
+Collection framework->
+
+Array and Collection Framework
+
+Limitation:
+store the data using array, its difficult to store large amount of data.
+Array->index based->performing operation on array is costly operation
+Homogenous data->can't store heterogenours
+size of fixed.
+inbuilt methods->to perform an operation
+large volume of data->Array
+
+
+
+Collection API->Joshua->
+1.2-version
+Collection API,Hierarchy and Framework
+
+Collection framework in Java ->provides an architecture  to store and manipulate the group of objects.
+Collection Framwork->Interface and group of classes with their methods.->
+
+Data structure and algorith=inbuilt data structure
+C++->STL
+Python->List, Tuple,set ,dicitionary
+Java->Collection Interface
+
+
+
+
+
+ArrayList->array/
+
+convert the arrayList to array?
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Garbage Collection
+File Handling in java
+
+
+
+
+
+
+
+
+
+
+
+
+
+

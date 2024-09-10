@@ -1,0 +1,259 @@
+Create 2 tables:
+1.courses->
+courseid->primary key
+coursename
+
+2.students->
+studentid->primary key
+name
+courseid->foriegn key 
+inner join
+
+1	aline	java full stack
+3	dhanish	java full stack
+2	bharath	Devops stack
+4	ramya	Mern stack
+
+
+Left join aggregation->SUM
+total salary paid in each department?
+department name     total salary
+Engineering          130000
+Marketing             55000
+Sales                 89000
+
+
+insert into employees(firstname,lastname,jobtitle,salary) 
+values ("karthik","nhf","Fresher",50000.00),
+("Arpita","Kembhavi","Fresher",60000.00),
+("Lavish","Jain","Experience",500000.00);
+
+select * from emp;
+
+select distinct firstname,salary from employees;
+
+ create table products(
+     productid int auto_increment  primary  key,
+     name varchar(20) not null,
+     price decimal(10,2) not null,
+    description text,
+    stockquantity int not null);
+    
+
+insert into products (name,price,description,stockquantity) values
+('Smartwatch',149.99,'Fitness and healthtracking watch',80),
+('Digital Camera', 499.99, 'High Resolution camera',40);
+
+
+create database jat;
+use  jat;
+create table emp(name varchar(20),age int, salary decimal(20,2));
+
+
+select * from emp;
+select * from mobile;
+select * from address;
+
+select * from user;
+create database emp_cruddb;
+
+create table employee(id bigint not null auto_increment primary key,
+name varchar(50),
+email varchar(50),
+age int,
+designation varchar(50));
+
+select * from employee;
+
+drop table employee;
+describe employee;
+
+select * from stdtable;
+
+use jfs;
+
+insert into students values
+			(109,"lavish",8,95),
+			(110,"pavan",8,88),
+			(111,"suman",8,73),
+			(112,"swapnil",8,76);
+
+
+select * from students;
+
+update students set city="hyderabad" where rollno=102;
+update students set city="chennai" where rollno=103;
+update students set city="bengaluru" where rollno=104;
+update students set city="pune" where rollno=105;
+update students set city="mumbai" where rollno=106;
+update students set city="nagpur" where rollno=107;
+update students set city="delhi" where rollno=108;
+update students set city="kolkata" where rollno=109;
+
+
+create database studentdb;
+use studentdb;
+create table courses(
+	course_id int primary key,
+    course_name varchar(50)
+);
+
+create table students(
+    student_id int primary key,
+    name varchar(50),
+    course_id int,
+    foreign key (course_id) references courses(course_id)
+    );
+
+insert into courses(course_id,course_name) values
+(1,"java full stack"),
+(2,"Devops stack"),
+(3,"Mern stack");
+
+insert into courses(course_id,course_name) values
+(4,NULL),
+(5,NULL),
+(6,NULL);
+
+select * from courses;
+
+
+insert into students(student_id,name,course_id) values
+(1,'aline',1),
+(2,'bharath',2),
+(3,'dhanish',1),
+(4,'ramya',3),
+(5,'Lavish',NULL);
+
+insert into students(student_id,name,course_id) values
+(8,'John',NULL),
+(9,'Joe',NULL);
+
+
+
+select * from students;
+
+
+select students.student_id,students.name,courses.course_name
+from students
+inner join courses on students.course_id=courses.course_id;
+
+
+select students.student_id,students.name,courses.course_name
+from students
+left join courses on students.course_id=courses.course_id;
+
+select students.student_id,students.name,courses.course_name
+from students
+right join courses on students.course_id=courses.course_id;
+
+
+create database employeedatabase;
+use employeedatabase;
+create table departments(
+department_id int primary key,
+department_name varchar(50)
+);
+
+create table employees(
+employee_id int primary key,
+name varchar(50),
+department_id int,
+foreign key (department_id) references departments(department_id)
+);
+
+
+create table salaries(
+employee_id int,
+salary decimal(10,2),
+foreign key (employee_id) references employees(employee_id)
+);
+
+insert  into departments(department_id,department_name) values
+(1,"Engineering"),
+(2,"Marketing"),
+(3,"Sales");
+
+
+select * from departments;
+
+
+insert into employees(employee_id,name,department_id) values
+(1,"Aline",1),
+(2,"Bharath",2),
+(3,"Suman",1),
+(4,"Dhanush",3),
+(5,"Kushal",NULL);
+
+
+select * from employees;
+
+insert into salaries(employee_id,salary) values
+(1,60000.00),
+(2,55000.00),
+(3,70000.00),
+(4,89000.00),
+(5,78000.00);
+
+select * from salaries;
+
+select employees.employee_id,employees.name,departments.department_name,salaries.salary
+from employees
+inner join departments on employees.department_id=departments.department_id
+inner join salaries on employees.employee_id=salaries.employee_id;
+
+select e.name as employee_name,d.department_name
+from employees e cross join departments d;
+
+select name as result from employees
+union 
+select department_name as result from departments;
+
+select d.department_name , count(e.employee_id) as num_employees, avg(s.salary) as avg_salary
+from departments d
+inner join employees e on d.department_id=e.department_id
+inner join salaries s on e.employee_id=s.employee_id
+group by d.department_name;
+
+select * from salaries;
+select * from employees;
+
+
+select e.name,s.salary 
+from employees e 
+left join salaries s on e.employee_id=s.employee_id
+where s.salary>58000.00;
+
+
+
+select e.name,s.salary
+from employees e
+right join salaries s on e.employee_id=s.employee_id
+order by s.salary desc;
+
+select e2.name as employee_name
+from employees e1
+join employees e2 on e1.department_id=e2.department_id
+where e1.name="Aline" ;
+
+
+
+select d.department_name ,sum(s.salary) as total_salary
+from departments d 
+left join employees e on d.department_id=e.department_id
+left join salaries s on e.employee_id=s.employee_id
+group by d.department_name;
+
+
+select e.name, s.salary 
+from employees e
+left join salaries s on e.employee_id=s.employee_id
+union all
+select e.name,s.salary
+from employees employees
+right join salaries s on e.employee_id=s.employee_id;
+
+
+
+
+

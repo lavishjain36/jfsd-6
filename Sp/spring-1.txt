@@ -1,0 +1,25 @@
+Rest vs GraphQL
+https://medium.com/@saddy.devs/rest-vs-graphql-2f99c3b88dec
+https://chat.openai.com/c/0b725c3c-51eb-48f0-aa98-c560c5fa907b
+
+WebApplication Architecture
+
+https://medium.com/@gwenilorac/layout-of-web-applications-795b3e8e4c1b
+https://chat.openai.com/c/37031fb8-81c7-430c-9feb-8373c35744de
+
+
+Java container and servlet:
+https://medium.com/@prasadchinta7997/introduction-to-java-servlets-c7c13442dea0#:~:text=Java%20servlets%20are%20a%20powerful,independence%2C%20scalability%2C%20and%20performance.
+
+https://pathum-liyanagama.medium.com/java-servlet-container-vs-application-server-vs-web-server-7471f89402ac
+https://medium.com/@vinaygoyal0460/jsp-servlets-bb7e1b7c82a2
+
+
+IOC and depedency injection
+https://medium.com/@adityagawraw006/inversion-of-control-ioc-and-dependency-injection-e6bba980d7b1#:~:text=Spring%20boot%20is%20a%20framework,than%20working%20on%20configuration%20work.
+
+
+Blocking and Non-Blocking
+
+https://vimalma1093.medium.com/java-springboot-blocking-vs-non-blocking-rest-api-implementation-fe5643840287
+https://skillfloor.medium.com/java-full-stack-development-trends-and-emerging-technologies-a4d2e0acc4e8

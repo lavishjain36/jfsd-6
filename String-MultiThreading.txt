@@ -1,0 +1,365 @@
+make call to friend?
+1)take your phone
+2)Dial number
+3)press button to connect the call
+4.Ringing
+5.Friend receives the call
+6.Start conversation->Hello 
+7.End up the call.
+
+synchronization->timing more->slowe
+1->10mb
+2.->20mb
+3.->5mb
+4->100mb
+5.->2mb
+
+5 files->unsynchronization
+files lesser->downloading
+files more size->later
+
+process-
+1->10mb
+2.->20mb
+3.->5mb
+4->100mb
+5.->2mb
+un-synchronzed order->less time 
+5
+3
+1
+2
+4
+
+
+package com.stringconcept;
+
+public class Test1 {
+
+	public static void main(String[] args) {
+		//creating string in java
+		String str1="sachin";//literal-String constant pool(SCP)
+		System.out.println(str1);
+		
+		String str2=new String("Lavish");//new keyword=?heap memory
+		System.out.println(str2);
+		
+		//array of character
+		char[] ch= {'g','u','v','i'};
+		String str3=new String(ch);
+		System.out.println(str3);
+		
+		
+		String str4="Magesh";
+		str4.concat("Senthil");//immutable in nature->can't modify 
+		System.out.println(str4);
+		
+		
+		//mutable->unsynchronized->not thread safe->performance
+		StringBuilder str5=new StringBuilder("Garvit");
+		str5.append("Menon");//on same object ->modify the content ->Mutable
+		System.out.println(str5);
+		
+		//mutable->synchronized->thread safe->not performance
+		StringBuffer str6=new StringBuffer("Mohammad");
+		str6.append("Shameer");
+		System.out.println(str6);//on same object->modify the content->Mutable
+
+	}
+	
+	
+
+}
+
+
+
+Uni thread program->synchronization
+1 program->first it should complete
+2 program->second program
+
+unsynchronization->
+Games->on computer->Multi threading
+Listen songs on youtube or spotify
+Download files at the same
+
+
+Watching Cricket->
+Live board->
+update score->concurrently->Multithreading
+Gaming->concurrently->Multithreading
+
+
+
+
+String->equals->compare content
+StringBuilder->equals->reference of 2 object=>new->heap->
+
+package com.stringconcept;
+
+public class Test2 {
+
+	public static void main(String[] args) {
+		String str1="lavish";//scp->String Constant pool
+		String str2=new String("lavish");//heap
+		String str5=new String("gaurav");//heap
+		
+		String str3="lavish";//str3 will point to same object as str1
+		
+		String str4="Suman";
+		
+		//comparing reference
+		System.out.println(str1==str2);//scp==heap
+		System.out.println(str1==str3);//scp==str3->sharing same pool
+		System.out.println(str1.equals(str2));//content->lavish==lavish
+		System.out.println(str1.equals(str3));//content->lavish==lavish
+		
+		System.out.println(str1==str4);//false
+	}
+
+}
+
+
+
+package com.stringconcept;
+
+public class Test3 {
+
+	public static void main(String[] args) {
+		StringBuilder sb1=new StringBuilder("guvi");//1 copy of the objec
+		StringBuilder sb2=new StringBuilder("guvi");//1 copy of another object
+		//if s1 and s2 are pointing same object or not
+		System.out.println(sb1==sb2);
+		System.out.println(sb1.equals(sb2));//->
+//		String builder class equal method will compare the reference or address of the object
+//		variable.
+	}
+
+}
+//reference->address
+
+
+
+
+
+
+
+HashMap()
+HshSet()
+
+hashcode()->method->integer hash code value for the object.
+
+Internally, it will generate hashCode() based on content of String
+
+provided->Object class->memory address.
+
+
+1lakh->same->
+1 time ->Hashing collision->hashcode ->false-
+
+ lavish    
+
+
+Day Agenda:
+Strings in Java
+java.lang->default 
+Multithreading in java
+
+
+String in java:
+What is String in java?
+String is class available in java.lang.String.
+String->it is used to present our information in form
+of character or group of character (array)or letter or line..
+""
+creating string in java using different ways.
+1.Literal ->
+String name1="lavish";->string literal->String constant pool.
+String name2="lavish"-Literal
+2.new keyword->heap memory area
+String strname=new String("lavish");->new->heap memory
+String ->it is final class present in java.lang package.
+immutable nature->
+StringBuilder-mutable nature.
+String constant pool and Heap memory area
+Immutability nature of ->Modification->String->immutable
+java.lang->
+String vs StringBuffer vs StringBuilder->important.
+important method supported by string.
+
+
+Mutlithreading:30min
+Uni programming->
+waste a lot of time with lot of memory space.
+CPU->utilization -reduced.
+
+Multi Programming->Execute several programs together is called multi programming
+CPU scheduler->
+
+New state->Ready state->Running State->Waiting ->Dead state.
+
+Java->1.0->used to take lot of time.
+
+
+Muti-Threading:
+Thred is lightweight process which containing squential execution
+independtly.
+
+
+Execute more than one thread at time simulatenously->Multi-Threading.
+
+
+Process-based(Multi-processing)
+Process->heavy weight
+
+Thread-based(Multi-Threading)->
+Threading is consuming space->use same address 
+Thread ->Lightweight
+1-process is required.
+
+types:
+1.single thread
+2.multi thread
+
+Thread->
+1.using extends->Thread class
+2.implementing Runnable->java.lang.Runnableinterface
+
+1000ms->1second
+2000ms->2second
+10000ms->10sec
+
+
+
+package com.multithreadconcept;
+
+public class ThreadMainnew {
+
+	public static void main(String[] args) {
+		MyThreadnew th1=new MyThreadnew();
+		Thread t=new Thread(th1);
+		t.start();
+//		t.run();//executing Runnable interface run()
+		for(int i=0;i<10;i++) {
+			System.out.println("Main thread new.");
+		}
+	}
+
+}
+
+
+package com.multithreadconcept;
+
+public class ThreadMain {
+
+	public static void main(String[] args) {
+		MyThread th=new MyThread();
+//		th.start();//newly created thread
+		th.run();//no new thread will be created->
+		
+		//logic
+		for(int i=0;i<10;i++) {
+			System.out.println("Main thread.");
+		}
+	}
+
+}
+
+
+package com.multithreadconcept;
+
+public class MyThread extends Thread {
+
+	public void run() {
+		for(int i=0;i<10;i++) {
+			System.out.println("customized thread.");
+		}
+	}
+
+}
+
+
+package com.multithreadconcept;
+
+public class MyThreadnew implements Runnable {
+
+	@Override
+	public void run() {
+		for(int i=0;i<10;i++) {
+			System.out.println("Customized thread new");
+			try {
+				Thread.sleep(1000);//2second
+			} catch (InterruptedException e) {
+				e.printStackTrace();
+			}
+		}
+	}
+	
+}
+
+
+package com.multithreadconcept;
+
+public class ThreadMain {
+
+	public static void main(String[] args) {
+		MyThread th=new MyThread();
+//		th.start();//newly created thread
+		th.run();//no new thread will be created->
+		
+		//logic
+		for(int i=0;i<10;i++) {
+			System.out.println("Main thread.");
+		}
+	}
+
+}
+
+
+package com.multithreadconcept;
+
+public class ThreadMainnew {
+
+	public static void main(String[] args) {
+		MyThreadnew th1=new MyThreadnew();
+		Thread t=new Thread(th1);
+		t.start();
+//		t.run();//executing Runnable interface run()
+		for(int i=0;i<10;i++) {
+			System.out.println("Main thread new.");
+		}
+	}
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

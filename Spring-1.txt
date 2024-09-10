@@ -1,0 +1,263 @@
+https://start.spring.io/
+
+
+Servlet +JSP+ EJB->included spring framework
+
+EJB->Spring Framework-
+
+
+
+Car and Driver->
+
+Car->start() and stop()
+Traveller()->travel()->will use Car class method
+
+Driver->Car car=new Car();
+car.start();
+car.stop();
+
+
+
+
+Spring Container->Spring context->Spring IOC container
+DI->Dependecy injection->to injection.
+
+
+
+new->keyword->
+
+BeanFactory Container->root interface for access spring beanfactory.
+
+ApplicationContext Container->
+
+Most of spring ->ApplicationContext Container->
+
+XML based configuration 
+java Based configuration
+
+
+@Configuration
+@Bean
+
+@Component->Steretotype Annotation.
+
+Controller->@Controller,@RestController
+Service->@Service
+Repository->@Repository->DAO layer
+
+
+
+@ComponentScan
+@Autowired
+
+
+
+Spring Web
+
+localhost:8080
+
+
+Spring ,Spring framework and Spring boot:
+What is Framework?
+What is Spring Framework?
+Different version of Spring Framework
+Libraries supported in Spring Framework
+
+What is tightly coupled and loosely coupled ?
+Java Container vs Spring Container
+Different types of IOC (Inversion of Control)->2 types of 
+Difference between Java bean,POJO(Plain old Java Object),Spring bean->
+Spring Annotations->20+ Annotations->
+
+Dependency injection->@Autowired->
+1.field injection
+2.getter and setter 
+3.constructor
+What is Spring Boot?
+Create a Spring project using Spring initializer
+
+
+
+
+J2SE->Java to Standard Edition
+J2EE->Java to Entereprise edition->Jakarta Enterprise edition
+J2ME->Java to Micro edition
+
+
+JSP->Java Server Pages=>Jakarta Server pages=>dynamic web application.
+EJB->Enterprise Java Beans->create enterprise application
+RestFul Webservices->
+JAX-Rs->Jakarta restful webservices
+JPA->Java persistence ->Jakarta persistence->
+persiste java object into data base
+
+
+Struts->Outdated.
+
+
+Spring->Spring ->Spring Frameowork->1 to 5->Spring boot
+
+Spring->desktop application,Client-server application,Web application,
+,Microservices(Distributed application),Enterprises.
+
+Spring 1.x version->6-7 modules->
+Spring ORM
+Spring Web 
+Spring Web MVC
+Spring DAO
+Spring Core
+Spring Context
+
+Spring 2.x ->6 modules
+
+Spring 3.X ->
+20 modules ->they grouped all modules .
+
+
+Spring is Light weight and open souce framework ->
+Interface -21->vendor
+author->Rod Johnson->
+
+introduced POJO Model->Plain old java object
+POJO->simple java object without any depdency .
+Business->Service->Controller->Database layer->
+
+
+getter and setter->POJOS->Data model which represent the data.
+
+public class Product{
+   private String pname;
+   private double price;
+
+//getter and setter
+}
+
+
+java Beans->
+A java is beans ia POJO->
+java beans ->searlizable.
+java beans getter & stter
+thread safe and synchronized.
+
+
+Spring Bean->
+it is pojo that is managed by Spring IOC container 
+(BeanFactory or ApplicationContext)
+
+
+
+
+
+
+
+Spring Container->
+it is core library of the Spring Framework.
+
+STS->Spring Tool Suite
+Eclipse IDE->heavy weight
+Intellij IDE->
+VScode->lightweight
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Using Spring Framework , we can develop all kind of applications-
+Standalone application.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

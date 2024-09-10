@@ -1,0 +1,344 @@
+Student->
+name
+roll no
+marks 
+
+->need create 
+
+Student->1
+name->lavish
+roll no->101
+marks-95
+
+Student->2
+name->magesh
+roll no->102
+marks ->99
+
+
+Student->3
+name->Sunil
+roll no->103
+marks->67 
+
+
+
+
+
+University->College?->has-relation ship ->
+one:many
+Person Class->Student?->is-a-relation
+Student-rollno-
+one:one
+can we have college without university->
+College->student and professor?
+1entity:many relation
+one:many
+
+
+can we have college without professor?
+
+4 type:
+1.one:one
+2.one:many
+3.many:one
+4.many:many
+
+association 
+
+Employee-> has one salary account
+one:one->single variable
+Employee->has multiple address->
+one:many->current, permanent->array of data.
+
+
+Employee->Account
+
+
+Creating an object of car->
+Car car1=new Car();
+Engine->acceleration(),gear(),automate locking
+
+
+polymorphism:
+Engine engine=new Car();->valid
+
+Engine-parent 
+Car-child
+Car car=new Engine();->not possible
+
+
+parent-money-child
+child-money->parent
+
+
+
+University->
+Computer science
+Electronice
+Mechatronics
+RObotoics
+Civil
+Electrical
+Biotechnology
+
+University->Department->Professor and students.
+
+Company->Department->employee ->functional.
+
+
+package com.university;
+
+import java.util.ArrayList;
+import java.util.List;
+
+public class University {
+
+	private String name;
+	private List<Department> departments;
+
+	public University(String name) {
+		this.name=name;
+		this.departments=new ArrayList<>();
+	}
+	
+	//instance method
+	public void addDepartment(String name) {
+		Department dept=new Department(name);
+		departments.add(dept);
+	}
+	
+	
+	
+	//Inner class Department 
+	public class Department{
+			private String name;
+			private List<Professor> professors;
+
+			public Department(String name) {
+			this.name = name;
+			this.professors = new ArrayList<>();
+			}
+
+			
+			//inner class Professors
+			public class Professor{
+				private String name;
+
+				public Professor(String name) {
+					this.name = name;
+				}
+
+				
+			}
+	}
+
+}
+
+
+
+Array in java:(Reference Data type):
+
+It contains a group of elements of similar type in single box and that too wwith contigous memory location.
+
+Large volume if data in single variable->Array.
+
+Data structure->
+Array is index based data structure which can hold
+similar(homogenous type) of element.
+Array->Object level data type
+
+syntax:
+int[] array=new int[size];
+
+
+Inheritance->
+Relationship between 2 classes.
+1.is-A relationship:
+once clas inherits another clas->is-relation
+Student class to "is-a" person
+Employee class to "is-a" person
+2.Has-A Relationship
+if you have instance of one class which 
+is used in another class, it is has-a-relation
+
+car->target object
+Engine engine;//instance member->object
+
+Address address->instance->has-a-relation.
+
+class Car->has engine
+engine->top level class
+car->subclass
+
+
+inner Class concept->
+class->class
+
+It is concept is keeping one class inside another.
+Lamdba->Anonymous inner class.
+
+
+
+
+
+
+
+
+
+
+
+
+
+Student->
+Person
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Inheritance->
+Is-A-Relation
+Has-A-Relation
+Inner class->Nested 
+
+
+package com.array.student;
+
+public class Student {
+	public Student(String name, int rollNumber, double marks) {
+		super();
+		this.name = name;
+		this.rollNumber = rollNumber;
+		this.marks = marks;
+	}
+	//fields->
+	private String name;
+	private int rollNumber;
+	private double marks;
+	
+	//constructor
+	
+	//method that will print the data of student
+	public void getData() {
+		System.out.println("Name: "+name);
+		System.out.println("Roll Number: "+rollNumber);
+		System.out.println("Marks "+marks);
+	}
+
+}
+
+
+package com.array.student;
+
+import java.util.Scanner;
+
+public class StudentMain {
+
+	public static void main(String[] args) {
+		Scanner sc=new Scanner(System.in);
+		//no of student from keyboard
+		System.out.println("Enter number of the student...");
+		int noofstudents=sc.nextInt();//2
+		
+		//create an array of Student obj.
+//		int[] array=new int[size];
+
+		Student[] students=new Student[noofstudents];//array object
+		
+		//iterate through student data
+		for(int i=0;i<noofstudents;i++) {
+			System.out.println("Student-"+(i+1));
+			String name=sc.next();//lavish
+			int rollNumber=sc.nextInt();//101
+			double marks=sc.nextDouble();//97
+			
+			//create each student object and add 
+			students[i]=new Student(name,rollNumber,marks);
+		}
+		
+		//print the data  of all students
+		System.out.println("All Students details:----------");
+		for(int i=0;i<noofstudents;i++) {
+			students[i].getData();
+			System.out.println("-------------------------------------------");
+		}
+	}
+
+}
+
+/*
+Enter number of the student...
+3
+Student-1
+Praveg
+101
+78
+Student-2
+Sharan
+102
+87
+Student-3
+Suman
+103
+78
+All Students details:----------
+Name: Praveg
+Roll Number: 101
+Marks 78.0
+-------------------------------------------
+Name: Sharan
+Roll Number: 102
+Marks 87.0
+-------------------------------------------
+Name: Suman
+Roll Number: 103
+Marks 78.0
+-------------------------------------------
+
+*/
+
+package com.array;
+
+import java.util.Scanner;
+
+public class DemoArray {
+
+	public static void main(String[] args) {
+		
+		//Create a Scanner class object to take input from 
+		Scanner sc=new Scanner(System.in);
+		
+		//size of array
+		int size=sc.nextInt();//5
+		//enter 5 element->entered by user
+		
+		int[] array=new int[size];//5->heap
+		int i;
+		
+		//read input element from the user->0<5->0 to 4th index
+		for( i=0;i<size;i++) {
+			array[i]=sc.nextInt();//10 20 15 18 30
+		}
+
+		//one more loop to print the array elements
+//		for( i=0;i<size;i++) {
+//			System.out.print(array[i]+" ");
+//		}
+		
+		System.out.println(array[8]);//at index
+
+	}
+
+}
+

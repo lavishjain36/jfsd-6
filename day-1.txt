@@ -1,0 +1,173 @@
+https://www.guvi.in/ide/
+
+WebDevelopment:Java
+
+Frontend:
+HTML,CSS and Javascript,Bootstrap,
+Framework->
+Thymleaf
+React.js+Backend->SPA
+
+Routing
+Component->
+
+
+
+
+
+
+
+Backend:
+Spring->Spring Core->SprinG Framework->Spring Boot
+
+
+Testing->
+Junit with mockito
+
+Searching->
+
+
+Doubt Clarification:
+
+
+Mongodb->Vast
+Mysql->
+
+
+
+
+Fundamental of Programming and Compiler:
+Bulb->
+
+When you provide multiple instruction to 
+machine, it develops a program
+Program:instruction
+Processor:understanding of 0's and 1's
+
+Machine Level language->
+0000,0010,1000
+Assembly Level language->
+ADD,SUB,MUL,MOV,DIV
+High Level Language:
++,-,*,%,->printf and scanf instruction.
+
+English like statement->
+All instruction from ALL converted to MLL.
+
+
+Hight level language:
+Writing instruction using symbols and english commands is HLL.
+
+ALL->MLL
+
+
+Object File vs Executable file(obj vs exe):
+1.Object file->contains code MLL(binary form).
+obj. incomplete file.
+
+2.executable file->which contains MLL code
+it is complete file.
+
+
+
+source file or source->saved file which contains our code.
+
+.c,.cpp,.java,.py
+
+
+Linker->it links library files and object file and generate executable file.
+Loader->HDD->to->Ram
+
+
+
+
+Java programming Language:
+Java is high level ,object oriented programming developed by 
+Sun Microsystem and now owned by Oracle corporation.(1990).
+
+WORA->Write once and run anywhere.
+
+Java code->compiled into ->Byte code
+
+Java virtual environment(JVM).
+
+->James Gosling
++
+->Standford University students.
+
+
+
+10yrs->Bell Labs
+
+
+
+
+1.Easy to understand
+2.Object oriented.
+3.Functional programming
+4.Portable/platform independt.
+
+
+Developed code->
+Compiler->Java programming->Execute->
+Compiler 
+
+
+Source code or byte code
+
+Java->
+Javascript->
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

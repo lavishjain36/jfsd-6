@@ -1,0 +1,125 @@
+Trees and Graphs:
+
+Tree->
+What is tree?
+Analogy to understand in application usecase
+Terminologies associated with trees concept:
+Binary Tree(BT)
+Binary Search Tree(BST)
+
+
+Graphs->
+What is Graph?
+Application use of graph
+Terminologies associated with graph concept
+BFS->Breadth first Search
+DFS-Depth First Search.
+
+
+
+import java.util.Scanner;
+
+public class Main {
+	//define a node.
+			static class Node{
+				int data;//value
+				Node left,right;
+				
+				//constructor
+				Node(int data){
+					this.data=data;
+				}
+			}
+			
+			
+			static Node root=null;
+			 
+			 
+			 //perform sum or addition
+			 static int sum(Node root) {
+				 //logic to add the numbers
+				 if(root==null) 
+					 return 0;
+				 
+				 //recursively call sum function left subtree and rightree
+				int leftpart= sum(root.left);
+				int rightpart=sum(root.right);
+				
+				return root.data+leftpart+rightpart;
+			 }
+			
+			 //method to insert data 
+			 static Node insert(Node root,int data) {
+				 //if tree is empty,create new node as root node
+				 if(root==null)
+					 root=new Node(data);
+				 //insert of data towards left or right part
+				 
+				 else if(root.data<data) 
+					 root.right=insert(root.right, data);
+					 
+				else
+					root.left=insert(root.left,data);
+				 
+				 
+				 return root;
+			 
+	}
+			 
+	public static void main(String[] args) {
+		Scanner sc=new Scanner(System.in);
+		int input=sc.nextInt();
+		while(input>=0) {
+			root=insert(root,input);
+			input=sc.nextInt();
+		}
+		int ans=sum(root);
+		System.out.println("Sum of all nodes are"+ans);
+	
+		}
+	}
+
+
+
+
+
+
+Trees and Graphs:
+
+Tree->
+What is tree?
+Analogy to understand in application usecase
+Terminologies associated with trees concept:
+Binary Tree(BT)
+Binary Search Tree(BST)
+
+
+Inorder traversal.->Left node-Root->Right child
+Preorder traversal->Root->Left ->Right
+Postorder traversal.->Right->Left-Root
+
+Graphs->
+What is Graph?
+Application use of graph
+Terminologies associated with graph concept
+BFS->Breadth first Search
+DFS-Depth First Search.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

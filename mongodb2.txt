@@ -1,0 +1,124 @@
+Find all products:
+find limit document.
+Find select product->Foreach
+
+Cursor Methods:
+pretty->it gives you the output in readable format.
+Foreach->It is function that will give document based on selection.
+toArray()->convert cursor to an array.
+limit(2)->Limit the number document returned by cursor.
+map
+count()->count the number of document in cursor.
+sort()->sort the document returned by cursor based on specific field or expression.
+
+Count->of The reviews in reveiws collections
+
+Sort the reviews by rating in descending order
+map->Applies to each document in cursor ,it returns array of results.
+
+
+
+
+
+Average Rating of all products->Aggregation
+Calculating total sales by category
+
+Find most Expensive product:
+
+Find or Sort the products by Name in ascending order
+
+Count the Number of product in each category:
+
+
+
+
+
+ cursor methods - map, toArray, pretty, forEach, limit, count, sort
+Aggregation
+
+
+Database->
+Ecommerce Application->
+ecommercedb->
+
+
+To create collection=>
+Database->3 Collection->
+1.products->
+field->name,price ,category
+2.categories
+3.reviews->
+product, rating,comment
+
+
+Considering that Sbi_Banking
+->4 collections->
+1.users->
+name, email,age ->5 data
+2.account->5 data insert itg
+userid:ObjectId("660e5bbe0c05a9929f9f990a")
+type:saving/current
+balance
+3.transactions
+account_id:Object(accountid)
+type:/deposit/withdrawal
+amount:
+
+4.loans->insert 5
+userid:Object(user collection)
+amount:
+interest_rate:8 to 11
+
+
+Perform Below operations:
+1.Find all users
+2.Find all accounts
+3.Find all transactions
+4.Find all loans
+
+5.Update the user infom with name
+6.Delete the data of one user 
+7.Get total balance of all account->aggregate
+8.Find all user name in array->foreach/map
+9.Find and limit first 3 data in document/.
+10.Apply count to get the number of document.
+11.Match the user with age greater than 30 and calculate their total balance amount
+12.Find user age between 30 and 40 and sort them by age.
+
+
+Operator->gte or lte
+{age:{$gte:30 ,$lte:40}}).sort({age:1})
+
+13.Find accounts with balance greater than 7000 and of type saving
+$gt
+$lt
+$gte
+$lte
+$ne
+
+14.Find transaction with an amount less than or equal to 500.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

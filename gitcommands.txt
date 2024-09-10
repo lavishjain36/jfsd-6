@@ -1,0 +1,36 @@
+Git & Github
+Version Control System->(VCS)->
+Git
+What is Git?
+Introduction to Github
+Repository
+Basically 2 ways to upload changes:
+1.traditional->drag and drop approach
+2.git cli approach-
+Git commands
+Working flow of git
+push the changes of your local machine to github 
+git pull and merge concept
+git clone ,fork
+
+1 project->
+module->Login and Registration
+               Forgot password and Ui development.
+
+Dev->lavishbranch->Main branch/Master branch
+test
+
+
+git init
+git add README.md
+git commit -m "first commit"
+git branch -M main
+git remote add origin https://github.com/lavishjain36/projectnew.git
+git push -u origin main
+
+
+
+
+
+
+

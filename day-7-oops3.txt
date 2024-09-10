@@ -1,0 +1,135 @@
+Polymorphism:
+Method overloading & Overriding
+Abstraction:
+Hide internal implementation and highlighting the set of services is abstraction.
+By using abstract class(0-100%) and interface(100%) , we can implement abstraction in java.
+
+
+keyword->abstract keyword in java.
+abstract classname
+
+abstract Mobilephone{
+m1();
+m2();
+m3();
+}
+
+1.abstract class before class
+2.abstract method 
+3.you can not create an object class.
+4.child class of abstract class->implementation.
+
+
+
+interface->to provide pure abstraction.
+
+
+
+
+
+ATM machine?
+bank people-
+Abstract classes->partial implementation
+interface-100& pure 
+Encapsulation:getter and setter
+Packages
+Access modifiers
+
+
+Tea->taking container+add water+milk+adding tea leaves+ingriendents.=>end product->Tea
+
+Magesh:
+take a bowl+add water+boil water+tea leaves+
+externally->milk=>Tea
+Person->Lavish
+I ->Mentor
+Friends-
+Family->
+Employee
+Child
+Husband
+1.Method Overloading->Compiler time polymorphism
+class->single
+if a class has multiple methods having same name but different in parameter,also the number parameter may also differ->Method overloading
+
+
+class->calculator-
+add(int num1,int num2);
+add(int num1,int num2,int num3);
+add(float num1,float num2)
+
+2.Method Overriding->Run time polymorphism
+min-atleast 2 class->inherited.
+
+if a child class has the same method as declared in parent class->overriding.
+
+
+Encapsulation
+Package
+Array in java
+
+
+
+
+
+
+
+
+
+
+
+
+Polymorphism->
+Overloading and oveririding
+Method overloading
+Method overriding
+
+
+Constructor overloading
+Constructor oveririding
+
+operator overloading->+
+
+
+
+
+
+loop->
+reference obj
+prod1obj=>person-1=>101,500,
+
+prod2obj=>person-2=>102,700,
+
+iterate through loop and get price of the all product.
+
+
+
+
+Assume current->0
+take input from user with some details:
+Customer name
+account
+Money:0
+
+deposit->
+an option->Scanner to enter money float->
+1000Rs
+
+totalamount=money+deposit
+
+
+
+withdraw->
+scanner->300
+Remaing=totalamount-withdraw
+
+
+
+
+
+
+
+
+
+
+

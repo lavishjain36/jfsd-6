@@ -1,0 +1,210 @@
+Java-8 to 17 version
+functional interface,lambda expression,Java streams api,Optional Class(to overcome problem Nullpointer exception),
+Method Reference(::),Private method in interface-(to overcome concept unimplemented ),
+Date and Time API,
+
+Day Agenda:
+Callable->Runnable & Future Interfaces
+Collectors API vs Immutable Collections
+Var keyword
+File APIs
+Switch expressions
+Text blocks
+
+Records->DTOS->Data Transfer object-
+Records->model data object->
+Records ->14 version->it provides simpler way of declaring class
+which are transparent carrier for immutable data.
+
+record
+
+
+
+Callable and future interface:
+Runnable->Mulitthreading->run()
+Callable-It is interface similiar to runnable that can give you result of computation and throws an excption.
+single Functionalinterface method->
+call()-result of specific type.
+
+Asynchronous->task with muilthreading
+
+Future interface and Callable together to acheive concurrent task which will produce thread safe result
+
+
+Future and Callable interface to manage asynchronus operation.
+
+
+Collectors API->java.util.stream
+
+Immutable Collections in java that can not modify the content after they are created.
+cannot add,remove,change elements.
+1.thread safty
+2.prevent side effects of updation.
+
+
+
+stream->java-8
+
+java-9
+Stream Enhancement
+
+
+1.2 version->java-23
+
+
+Grouping the object based on length of object
+
+Lavish-6,Magesh-6,Dhanush-7, Niruj-5,Aline-5,guvi-4
+
+
+Group the data in same box based on length->
+
+{Lavish,Magesh}
+{Dhanish}
+{Niruj,ALine)
+{guvi}
+
+
+
+package com.java10var;
+
+import java.util.ArrayList;
+
+public class Test {
+
+	public static void main(String[] args) {
+//delcare a string variable using var
+		var text="Hello Buddy...";
+		var num=10;
+		System.out.println(text);
+		//var with reference or object ->Arraylist
+		var list=new ArrayList<>();
+		
+		list.add("Lavish");
+		list.add("Kushal");
+		list.add("Magesh");
+		list.add("Coraro");
+		list.add("Bharat");
+		list.add(10);
+		
+		System.out.println(list);
+		
+		//looping
+		
+		var numbers=new int[] {10,50,30,20,67};
+		for(var number:numbers ) {
+			System.out.println(number);
+		}
+		
+		//lambda
+//		var result=(int num1,int num2)->num1+num2;
+		
+	}
+
+}
+
+
+package com.java12;
+
+public class Test {
+
+	public static void main(String[] args) {
+//		int day=3;
+//		String daytype;
+//		switch(day) {
+//		case 1:
+//		case 2:
+//		case 3:
+//		case 4:
+//		case 5:
+//			daytype="weekday";
+//			break;
+//		case 6:
+//		case 7:
+//			daytype="weekend";
+//			break;
+//		default:
+//			daytype="inavlid day";
+//		}
+//		System.out.println(daytype);
+		
+		//Switch expression-12 version
+		int day=3;
+		String daytype=switch (day) {
+		case 1,2,3,4,5->"weekday";
+		case 6,7->"weekend";
+		default->"inavlid day";
+		};
+		
+		System.out.println(daytype);
+
+	}
+
+}
+
+
+package com.java13;
+
+public class TextBlockconcept {
+
+	//textblock->represent string using """->triple double quoatation
+	public static void main(String[] args) {
+		String text="Hello People\n"+"How are your?\n"+"Welcome to string concatnation";
+		System.out.println(text);
+		
+		//database connectivity->query parameter-??
+//		"insert into table values(101,"lavish")";
+		String newtext="""
+				Hello People
+				How are your?
+				Welcome to string concatnation
+				""";
+		System.out.println(newtext);
+		
+		
+
+	}
+
+}
+
+
+
+var keyword->
+local type of variable type of reference.
+->Java-10
+
+
+Switch expression->control flow->
+Switch expression->
+
+Text Block->Java-13 version
+Try with resources:
+
+Jdk-1.6 version
+resources leakage
+
+try catch finally
+
+try ()
+{
+String url="";
+String name="";
+String password="";
+}
+catch(){
+
+
+try with resources is to manage the connection and once you are done with logic ->connection or close object will be closed automatically.
+
+}
+
+Collectors
+Collections
+Runnable,Callable ,Future->Runnable vs Callable vs Future
+try with resources
+Immutable collections->Collections unmodifieable
+Collection(I)->throwable and Collections(C)?
+switch expression
+textblock 
+var keyword
+Record

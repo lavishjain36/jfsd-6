@@ -1,0 +1,174 @@
+To upload task:
+1.Github.com login
+2.New repository->
+3.Provide repo name
+4.Use upload file option.
+
+JShell->introduced in Java- 9 version.
+You can write java code using command line
+without main method.
+
+1.Jshell to test small code
+2.can not use to build application.
+
+Compiler the java code->
+javac filename.java
+
+interpret or execute->
+java filename
+
+
+Git->Driver->Locally
+Github->godown to store goods and material->remote repo/
+
+
+
+primitive data type->8 
+1.bool
+2.char
+3.short
+4.int
+5.float
+6.double
+7.long
+8.byte
+
+
+
+Java-1996->jdk-1.0
+J2SE->1998
+->Collection framework 
+Swings
+JIT compiler
+GUI application
+
+J2SE->1.3->2000
+J2SE->1.4->2002
+J2SE->1.5->2004
+1.Annotations
+2.Autoboxing
+3.Enumeration
+4.for each
+
+Java-8-9
+Streams api,Date and Time api
+,Functional interface
+
+
+Java-10-2018
+local variable,type interface
+
+
+LTS->long term support->
+70% industry project run on java 8 version
+java-7
+java-8
+java-11
+java-17
+
+company=>use the same version.
+
+Day-2 (Agenda)
+
+Variable:
+It is a name given to a particular memory location where
+value can be out and we can use the variable to print the s
+single value at a time.
+
+datatype variablename
+
+
+Identifier->it is name which should be given to variable.
+1.->(a-z,A-Z) or digit- 0 to 9 and special - _
+
+
+keywords in java->in java , we have total 53 keywords.
+
+We use this keywords to develop our java code.
+
+
+
+Data types in java:
+
+
+
+
+
+Reserved Keyword
+Java Naming Convention,
+First Java Program and Main Method,
+->CLI
+->Jshell.->java version-9.
+->Eclipse IDE/Intellij->
+Java Development KIT->JDK
+JVM, JRE, JDK
+JVM Architecture
+Data types,
+
+
+
+Operators:
+It is concept to perform business operation to write any logics for our application.
+10->Employees->
+1.Arithemetic ->+,-,*,%,/
+2.Increment or decrement -(++,--)
+3.Relational-><,><=,>=,==
+4.Bitwise->
+5.Logical ->&&,||,!
+6.Ternary Operator-
+7.Assignment operator->=
+
+Business to develop code
+Operator+Condition statement+branching and looping
+->develop a code.
+
+
+
+
+package com.simplejavacode;
+
+class Test{
+
+//java main method
+	public static void main(String[] args) {
+		//declare 2 variable with num1 and num2
+		int num1=10;
+		int num2=20;
+		//comparision->10>20->boolean ->false
+		if(num1>num2) {
+			System.out.println("Num1 is greater");
+		}else {
+			System.out.println("Num2 is greater");
+		}
+	}
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

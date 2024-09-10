@@ -1,0 +1,591 @@
+let promiseobj=fetch('https://jsonpleholder.typicode.com/todos')
+
+promiseobj.then(response=>{
+    //then part of block->successful operation using fulfilled
+    return response.json();
+}).then(data=>{
+    //for 
+    console.log(data);
+}).catch((error)=>{
+    //catch->rejection of resources
+    console.log("Something went wrong "+error);
+})
+
+
+
+
+
+    // console.log(promiseobj);
+
+
+let promiseobj=fetch('https://jsonpleholder.typicode.com/todos')
+
+promiseobj.then(response=>{
+    //then part of block->successful operation using fulfilled
+    return response.json();
+}).then(data=>{
+    //for 
+    console.log(data);
+}).catch((error)=>{
+    //catch->rejection of resources
+    console.log("Something went wrong "+error);
+})
+
+let url="https://jsonplaceholder.typicode.com/todos";
+
+axios.get(url).then((response)=>console.log(response.data));
+
+
+
+    // console.log(promiseobj);
+
+
+    // xmhttprequest=>fetch or axios 
+
+
+
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+</head>
+<body>
+  
+  <script src="./script.js"></script>
+</body>
+</html>
+
+
+
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+</head>
+<body>
+
+  <ul id="imglst">
+<!-- image should come here  -->
+     <!-- li ->image  -->
+  </ul>
+  
+  <script src="./script.js"></script>
+</body>
+</html>
+
+
+
+//function ->
+function createNode(element){
+    return document.createElement(element);
+}
+
+
+//we are parent-child
+function getappend(pe,el){
+    return pe.appendChild(el);
+}
+
+//select the element
+const ulelement=document.getElementById("imglst");
+const url="https://randomuser.me/api/?gender=male&results=200";//url
+
+//Fetch the data ->console 
+fetch(url)
+    .then((resp)=>resp.json())
+    .then((data)=>{
+        console.log(data.results);
+     let randomuserobj = data.results;
+
+      randomuserobj.map((obj)=>{
+        //create element 
+        let lielement=createNode("li");
+        let imgelement=createNode("img");
+        let spantag=createNode("h1");//created span tag->firstname+lastname
+        // let emailtag=createNode("h3");
+        imgelement.src=obj.picture.large;
+        spantag.innerHTML=`${obj.name.first} ${obj.name.last}`;
+        
+        getappend(lielement,imgelement);
+        getappend(lielement,spantag);
+        getappend(ulelement,lielement)
+     })
+    }).catch((error)=>{
+        console.log(error);
+    })
+
+
+
+
+//Arra of employee
+let employees = [
+    {
+      id: 1,
+      first_name: "Suresh",
+      last_name: "Kumar",
+      email: "suresh@gmail.com",
+      gender: "male",
+      ip_address: "160.192.178.23",
+    },
+  
+    {
+      id: 2,
+      first_name: "Sourav",
+      last_name: "Das",
+      email: "sourav@gmail.com",
+      gender: "male",
+      ip_address: "160.192.168.23",
+    },
+  
+    {
+      id: 3,
+      first_name: "Jhansi",
+      last_name: "Das",
+      email: "jhansi@gmail.com",
+      gender: "female",
+      ip_address: "160.192.128.23",
+    },
+  
+    {
+      id: 4,
+      first_name: "John",
+      last_name: "Paul",
+      email: "john@gmail.com",
+      gender: "male",
+      ip_address: "160.192.198.23",
+    },
+    {
+      id: 5,
+      first_name: "Lavish",
+      last_name: "paul",
+      email: "lavish@gmail.com",
+      gender: "male",
+      ip_address: "160.192.148.23",
+    },
+  
+    {
+      id: 6,
+      first_name: "Sourav",
+      last_name: "Paul",
+      email: "sourav@gmail.com",
+      gender: "male",
+      ip_address: "160.192.128.23",
+    },
+    {
+      id: 7,
+      first_name: "Sangeetha",
+      last_name: "Paul",
+      email: "sangeetha@gmail.com",
+      gender: "female",
+      ip_address: "160.193.178.23",
+    },
+  
+    {
+      id: 8,
+      first_name: "Pavan",
+      last_name: "Sai",
+      email: "pavan@gmail.com",
+      gender: "male",
+      ip_address: "160.172.178.23",
+    },
+    {
+      id: 9,
+      first_name: "Pavni",
+      last_name: "Das",
+      email: "pavni@gmail.com",
+      gender: "female",
+      ip_address: "160.162.178.23",
+    },
+    {
+      id: 10,
+      first_name: "Jenny",
+      last_name: "Paul",
+      email: "jenny@gmail.com",
+      gender: "female",
+      ip_address: "160.182.178.23",
+    },
+  ];
+
+
+  //logical stuff to print the data in DOM using 
+//   1.All Employee Data 
+let allempbutton=document.querySelector("#all-emp-btn");
+// console.log(allempbutton)
+allempbutton.addEventListener("click",function(){
+    //display the data 
+    displayEmployees(employees);
+    console.log(employees);
+})
+//   2.If user click on Male->Male Employee Data 
+
+let maleempbutton=document.querySelector("#male-emp-btn");
+
+maleempbutton.addEventListener("click",function(){
+    //return ->filtered data of male whose gender is male
+    let maleEmployee=employees.filter(function(emp){
+        return emp.gender==="male";
+    });
+    console.log(maleEmployee);
+    displayEmployees(maleEmployee);
+
+})
+
+// '10'->String
+// 10->Number
+
+//   3.If user click on Female->Female Employee Data 
+
+let femaleempbutton=document.querySelector("#female-emp-btn");
+
+femaleempbutton.addEventListener("click",function(){
+    //return ->filtered data of male whose gender is male
+    let femaleEmployee=employees.filter(function(emp){
+        return emp.gender==="female";
+    });
+    console.log(femaleEmployee);
+    displayEmployees(femaleEmployee);
+
+})
+
+//   4.if user type in Search box->Populate the data of respective of on top
+
+//logic for search functionality 
+let searchboxelement=document.querySelector("#search-box");
+searchboxelement.addEventListener("keyup",function(){
+
+    let textEntered=searchboxelement.value;
+    console.log(textEntered);
+    let filterEmployees=[]; //empty array object
+    if(textEntered!=""){
+        //populate the data at top
+        filterEmployees=employees.filter(function(emp){
+            return emp.first_name.toLowerCase().includes(textEntered.toLowerCase())||
+                   emp.email.toLowerCase().includes(textEntered.toLowerCase())||
+                   emp.last_name.toLowerCase().includes(textEntered.toLowerCase())
+
+        })
+        //display the filtered data //call display function
+        displayEmployees(filterEmployees);
+
+    }
+   
+})
+
+//   5.Display Data based on selection of button 
+
+let displayEmployees=(employees)=>{
+     //select the tbody using id-> table-body
+    let tableBodyelement=document.querySelector("#table-body");
+    //clear the body 
+    let tableRow="";
+    //use loop mechanism p>for ,foreach,for in ,for of 
+
+    for(let employee of employees){
+        tableRow +=`
+        <tr>
+            <td>${employee.id}</td>
+            <td>${employee.first_name}</td>
+            <td>${employee.last_name}</td>
+            <td>${employee.email}</td>
+            <td>${employee.gender}</td>
+            <td>${employee.ip_address}</td>
+        </tr>
+        `;
+        tableBodyelement.innerHTML=tableRow;
+    }
+
+}
+  
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Employee Data Using Array Of OBJECT with DOM</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+</head>
+<body>
+
+  <!-- create button  -->
+  <section class="container-fluid mt-3">
+
+        <button class="btn btn-primary" id="all-emp-btn">All Employee</button>
+        <button class="btn btn-secondary" id="male-emp-btn">Male Employee</button>
+        <button class="btn btn-success" id="female-emp-btn">Female Employee</button>
+
+        <br><br>
+        <!-- input for search functionality  -->
+        <form action="">
+            <label for="">Type Employee Name</label>
+              <input type="search" 
+              id="search-box" 
+              class="inputfieldsearchbox" 
+              placeholder="Search Here"
+              >
+        </form>
+
+        <!-- //create a layout for table to display data in table format  -->
+        <table class="table table-success table-bordered">
+          <thead>
+                <tr>
+                  <th>ID</th>
+                  <th>First Name</th>
+                  <th>Last Name</th>
+                  <th>Email</th>
+                  <th>Gender</th>
+                  <th>IP Address</th>
+                </tr>
+          </thead>
+          <tbody id="table-body">
+            <!-- //this is place where data should be inserted  -->
+          </tbody>
+        </table>
+  </section>
+  <script src="./script.js"></script>
+</body>
+</html>
+
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Employee Data Using Array Of OBJECT with DOM</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+</head>
+<body>
+
+  <!-- create button  -->
+  <section class="container-fluid mt-3">
+
+        <button class="btn btn-primary" id="all-emp-btn">All Employee</button>
+        <button class="btn btn-secondary" id="male-emp-btn">Male Employee</button>
+        <button class="btn btn-success" id="female-emp-btn">Female Employee</button>
+
+        <br><br>
+        <!-- input for search functionality  -->
+        <form action="">
+            <label for="">Type Employee Name</label>
+              <input type="search" 
+              id="search-box" 
+              class="inputfieldsearchbox" 
+              placeholder="Search Here"
+              >
+        </form>
+
+        <!-- //create a layout for table to display data in table format  -->
+        <table class="table table-success table-bordered">
+          <thead>
+                <tr>
+                  <th>ID</th>
+                  <th>First Name</th>
+                  <th>Last Name</th>
+                  <th>Email</th>
+                  <th>Gender</th>
+                  <th>IP Address</th>
+                </tr>
+          </thead>
+          <tbody id="table-body">
+            <!-- //this is place where data should be inserted  -->
+          </tbody>
+        </table>
+  </section>
+  <script src="./script.js"></script>
+</body>
+</html>
+
+
+//Arra of employee
+let employees = [
+    {
+      id: 1,
+      first_name: "Suresh",
+      last_name: "Kumar",
+      email: "suresh@gmail.com",
+      gender: "male",
+      ip_address: "160.192.178.23",
+    },
+  
+    {
+      id: 2,
+      first_name: "Sourav",
+      last_name: "Das",
+      email: "sourav@gmail.com",
+      gender: "male",
+      ip_address: "160.192.168.23",
+    },
+  
+    {
+      id: 3,
+      first_name: "Jhansi",
+      last_name: "Das",
+      email: "jhansi@gmail.com",
+      gender: "female",
+      ip_address: "160.192.128.23",
+    },
+  
+    {
+      id: 4,
+      first_name: "John",
+      last_name: "Paul",
+      email: "john@gmail.com",
+      gender: "male",
+      ip_address: "160.192.198.23",
+    },
+    {
+      id: 5,
+      first_name: "Lavish",
+      last_name: "paul",
+      email: "lavish@gmail.com",
+      gender: "male",
+      ip_address: "160.192.148.23",
+    },
+  
+    {
+      id: 6,
+      first_name: "Sourav",
+      last_name: "Paul",
+      email: "sourav@gmail.com",
+      gender: "male",
+      ip_address: "160.192.128.23",
+    },
+    {
+      id: 7,
+      first_name: "Sangeetha",
+      last_name: "Paul",
+      email: "sangeetha@gmail.com",
+      gender: "female",
+      ip_address: "160.193.178.23",
+    },
+  
+    {
+      id: 8,
+      first_name: "Pavan",
+      last_name: "Sai",
+      email: "pavan@gmail.com",
+      gender: "male",
+      ip_address: "160.172.178.23",
+    },
+    {
+      id: 9,
+      first_name: "Pavni",
+      last_name: "Das",
+      email: "pavni@gmail.com",
+      gender: "female",
+      ip_address: "160.162.178.23",
+    },
+    {
+      id: 10,
+      first_name: "Jenny",
+      last_name: "Paul",
+      email: "jenny@gmail.com",
+      gender: "female",
+      ip_address: "160.182.178.23",
+    },
+  ];
+
+
+  
+  //logical stuff to print the data in DOM using 
+//   1.All Employee Data 
+let allempbutton=document.querySelector("#all-emp-btn");
+// console.log(allempbutton)
+allempbutton.addEventListener("click",function(){
+    //display the data 
+    displayEmployees(employees);
+    console.log(employees);
+})
+//   2.If user click on Male->Male Employee Data 
+
+let maleempbutton=document.querySelector("#male-emp-btn");
+
+maleempbutton.addEventListener("click",function(){
+    //return ->filtered data of male whose gender is male
+    let maleEmployee=employees.filter(function(emp){
+        return emp.gender==="male";
+    });
+    console.log(maleEmployee);
+    displayEmployees(maleEmployee);
+
+})
+
+// '10'->String
+// 10->Number
+
+//   3.If user click on Female->Female Employee Data 
+
+let femaleempbutton=document.querySelector("#female-emp-btn");
+
+femaleempbutton.addEventListener("click",function(){
+    //return ->filtered data of male whose gender is male
+    let femaleEmployee=employees.filter(function(emp){
+        return emp.gender==="female";
+    });
+    console.log(femaleEmployee);
+    displayEmployees(femaleEmployee);
+
+})
+
+//   4.if user type in Search box->Populate the data of respective of on top
+
+//logic for search functionality 
+let searchboxelement=document.querySelector("#search-box");
+searchboxelement.addEventListener("keyup",function(){
+
+    let textEntered=searchboxelement.value;
+    console.log(textEntered);
+    let filterEmployees=[]; //empty array object
+    if(textEntered!=""){
+        //populate the data at top
+        filterEmployees=employees.filter(function(emp){
+            return emp.first_name.toLowerCase().includes(textEntered.toLowerCase())||
+                   emp.email.toLowerCase().includes(textEntered.toLowerCase())||
+                   emp.last_name.toLowerCase().includes(textEntered.toLowerCase())
+
+        })
+        //display the filtered data //call display function
+        displayEmployees(filterEmployees);
+
+    }
+   
+})
+
+//   5.Display Data based on selection of button 
+
+let displayEmployees=(employees)=>{
+     //select the tbody using id-> table-body
+    let tableBodyelement=document.querySelector("#table-body");
+    //clear the body 
+    let tableRow="";
+    //use loop mechanism p>for ,foreach,for in ,for of 
+
+    for(let employee of employees){
+        tableRow +=`
+        <tr>
+            <td>${employee.id}</td>
+            <td>${employee.first_name}</td>
+            <td>${employee.last_name}</td>
+            <td>${employee.email}</td>
+            <td>${employee.gender}</td>
+            <td>${employee.ip_address}</td>
+        </tr>
+        `;
+        tableBodyelement.innerHTML=tableRow;
+    }
+
+}
+  

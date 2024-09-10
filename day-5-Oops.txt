@@ -1,0 +1,341 @@
+
+
+Static->associate with class
+Non-static/instance/instantiation-Object creation.
+OOp's->
+Object Oriented Concepts
+todays topic of discussion:
+1.Introduction to oops(class and objects)
+2.Types of variable->
+Level-1
+1.primitve variables
+2.reference variable
+
+Level-2
+1.instance variable
+2.local variable 
+3.static variable
+
+3.JVM area of execution->
+1.Method Area
+2.Heap Area
+3.Stack Area
+4.PC-Register
+5.Native Method area
+
+4.How to create a class in java program?
+class Test{
+data member
+variables
+methods
+constructor
+}
+Oops features:
+1.Inheritance
+2.Encapsulation
+3.Polymorphism
+4.Abstraction
+
+
+OOP->oops is methodology or apporach to design a sotware program using class and objects.
+
+objects->play a real-world entity
+->pen,chair,laptop,table,mobile,fan etc.
+physical existence of any element is object.
+
+
+Book my show->
+Objects:person,ticket,ticket issuer,cinemahall,chair,3D-glasses,
+Screen,
+
+
+All the above object are available virtually->(Software or you webb application).
+
+
+
+
+
+
+
+
+Oops->
+1.you need mark and define the objects
+2.Every object will have 2 parts:
+1.has-part:->information about variable(variable ,data members,field).
+2.does-part->include method or functionality.(behaviour)
+
+
+
+
+
+
+
+
+
+
+Class->A class is user define blue print or prototype from which objects are created.
+To represent an object, we need to have blue print of the class.
+
+How you create a blue print in java?
+Reserved keyword-> "class"->smallcase.
+
+
+
+How you create object in java?
+we use ->new keyword ->
+create an object for class 
+
+Syntax:
+ClassName variable/ref=new ClassName();
+
+Reference data type->
+
+
+variable
+class
+object
+constructor
+methods
+
+
+1.local variable->created inside main method are local->
+Stack area 
+2.instance ->created inside a class and outside method.
+Instance variable->heap memory
+3.static variable->
+
+
+
+
+
+package com.oops.basic;
+
+public class Test {
+
+	static int num=10;
+	//instance variable
+	int num1=20;
+	
+	//constructor
+	Test(){
+		System.out.println("Constructor execution...");
+	}
+	
+	//static block
+	static {
+		System.out.println(num);
+		System.out.println("Static Block");
+	}
+	//instance block
+	{
+		System.out.println(num1);
+		System.out.println("This is instance block");
+	}
+	
+	//static method
+	static void m1() {
+		System.out.println("Static method");
+	}
+	
+	//instance method
+	void m2_instancemethod() {
+		System.out.println("Instance method");
+	}
+	public static void main(String[] args) {
+		
+		//call static method
+		Test.m1();
+		Test t1=new Test();
+		t1.m2_instancemethod();//access m2 method
+	}
+
+}
+
+//1.static variable
+//2.static block
+//3.static method
+//4.non-static methor or instance variable
+//5.non-static or instance block
+//6.constructor
+//7.Method
+
+package com.oops.basic;
+
+
+//Simple jav class with Student-Pascal case convention
+public class Student {
+	//variable->Has-part->variable/fields/data members/identifiers->Camelcase
+	
+	//instance variable->
+  	int id;
+    String name;
+	int age;
+	char gender;
+	String address;
+	static String company="Guvi";//static variable
+	
+	int accountnumber;
+	
+	public Student() {
+		System.out.println("Deafult 0-argument constructor");
+	}
+	
+	public Student(int id,String name,int age,char gender,String address) {
+	 System.out.println("Parameterized constructor");
+	  this.id=id;//101
+	  this.name=name;//Swapnil
+	  this.age=age;//38
+	  this.gender=gender;//M
+	  this.address=address;//Bengaluru
+	}
+	
+	//Does part->Method-it is to write business logic->CamelCase
+	//method in java
+	void play() {
+		System.out.println("Student is playing games");
+	}
+	void study() {}
+	void drink() {}
+	void sleep() {
+		System.out.println("Student is sleeping");
+	}
+	void getData() {
+		System.out.println(this.id+" "+this.name+" "+this.age);
+	}
+	void calculateData() {}
+	
+    void displayScreen() {};
+	//java -Camel case
+	
+
+	public static void main(String[] args) {
+		
+		//Local ->variable->variable created inside main method 
+		int num1=10;
+		int num2=20;
+		//add this 2 number
+		int sum=num1+num2;
+		System.out.println(sum);
+		
+		//main method is controller for your java program.
+		//create an object of class Student->instantiation
+//		Student s1=new Student();//0-argument constructors->hashcode()
+//		Student std1=new Student(101,"Swapnil",38,'M',"Bengaluru");//parameterized constructor
+//	
+//		//object reference, i can call method-
+//		s1.play();//calling method->play()
+//		s1.sleep();
+//		System.out.println(s1.hashCode());
+//		System.out.println(std1.hashCode());
+//		std1.getData();
+//		
+//		System.out.println(std1.name);
+		
+		
+		//To acess static varible->Classname
+		
+	   System.out.println(Student.company);
+	   
+	   //Reference access or instance or instantiation->Object
+	   
+	}
+
+}
+
+
+
+package com.oops.basic;
+
+public class Person {
+	private String name;//variable->instance variable
+	//define variable
+	//Constructor->same as classname ->initialize
+	//to print the data
+	public String getName() {
+		return name;
+	}
+//to set the data 
+	public void setName(String name) {
+		this.name = name;
+	}
+	//static method
+		public static void main(String[] args) {
+			Person p1=new Person();	
+		
+			p1.setName("Pavithra");
+			System.out.println(p1.getName());
+	}
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+A->Final->No modication further
+
+extends ?
+B->Inheritance is prevented.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

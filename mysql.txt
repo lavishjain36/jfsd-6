@@ -1,0 +1,744 @@
+mysql –u [username] –p
+mysql -u root -p
+Database:
+MYSQL:
+
+Custom->
+1.Mysql shell
+2.GUI->Mysql workbench
+3.MYSQL server
+
+id   username email 
+
+
+id->unique->
+
+
+
+
+
+
+
+
+1.MYSQL->
+1.create database database;
+2. use databasename;
+3.select * from tablename;
+4.create table tabname(
+
+)
+
+5.insert into tablename 
+
+6.select columname from tablename;
+
+
+
+1.code
+answer
+
+output
+
+
+2.Code 
+answer 
+output
+
+
+
+
+
+
+
+
+
+
+
+Microsoft Windows [Version 10.0.19045.4170]
+(c) Microsoft Corporation. All rights reserved.
+
+C:\Program Files\MySQL\MySQL Server 8.0\bin>mysql -u root -p
+Enter password: ****
+Welcome to the MySQL monitor.  Commands end with ; or \g.
+Your MySQL connection id is 15
+Server version: 8.0.33 MySQL Community Server - GPL
+
+Copyright (c) 2000, 2023, Oracle and/or its affiliates.
+
+Oracle is a registered trademark of Oracle Corporation and/or its
+affiliates. Other names may be trademarks of their respective
+owners.
+
+Type 'help;' or '\h' for help. Type '\c' to clear the current input statement.
+
+mysql> show databases;
++--------------------------+
+| Database                 |
++--------------------------+
+| amazonapp                |
+| busapp                   |
+| busreservation           |
+| data_jpa                 |
+| data_jpa_mapping         |
+| datajpacrud              |
+| datajpatest              |
+| demo                     |
+| emp_cruddb               |
+| empdb                    |
+| employee                 |
+| employeedatabase2        |
+| employeemanagementsystem |
+| ems                      |
+| guviemp                  |
+| guvitask                 |
+| information_schema       |
+| jat                      |
+| lms                      |
+| mysql                    |
+| patient_appointment      |
+| patient_management       |
+| patientmanagement        |
+| performance_schema       |
+| registrationlogin_db     |
+| restfuldb                |
+| sakila                   |
+| security_db              |
+| sys                      |
+| todosdb                  |
+| userdb                   |
+| world                    |
++--------------------------+
+32 rows in set (0.00 sec)
+
+mysql> create database jfs6db;
+Query OK, 1 row affected (0.03 sec)
+
+mysql> use jfs6db;
+Database changed
+mysql> create table stdtable
+    -> (
+    -> id int unsigned not null auto_increment,
+    -> username varchar(50) not null,
+    -> email varchar(50) not null,
+    -> primary key (id)
+    -> );
+Query OK, 0 rows affected (0.07 sec)
+
+mysql> show tables;
++------------------+
+| Tables_in_jfs6db |
++------------------+
+| stdtable         |
++------------------+
+1 row in set (0.00 sec)
+
+mysql> describe stdtable;
++----------+--------------+------+-----+---------+----------------+
+| Field    | Type         | Null | Key | Default | Extra          |
++----------+--------------+------+-----+---------+----------------+
+| id       | int unsigned | NO   | PRI | NULL    | auto_increment |
+| username | varchar(50)  | NO   |     | NULL    |                |
+| email    | varchar(50)  | NO   |     | NULL    |                |
++----------+--------------+------+-----+---------+----------------+
+3 rows in set (0.01 sec)
+
+mysql> select * from stdtable;
+Empty set (0.01 sec)
+
+mysql> insert into stdtable(username,email) values("lavish123","lavish@gmail.com");
+Query OK, 1 row affected (0.02 sec)
+
+mysql> select * from stdtable;
++----+-----------+------------------+
+| id | username  | email            |
++----+-----------+------------------+
+|  1 | lavish123 | lavish@gmail.com |
++----+-----------+------------------+
+1 row in set (0.00 sec)
+
+mysql> insert into stdtable(username,email) values("magesh123","magesh@gmail.com");
+Query OK, 1 row affected (0.01 sec)
+
+mysql> insert into stdtable(username,email) values("dhanush123","dhanush@gmail.com");
+Query OK, 1 row affected (0.01 sec)
+
+mysql> select * from stdtable;
++----+------------+-------------------+
+| id | username   | email             |
++----+------------+-------------------+
+|  1 | lavish123  | lavish@gmail.com  |
+|  2 | magesh123  | magesh@gmail.com  |
+|  3 | dhanush123 | dhanush@gmail.com |
++----+------------+-------------------+
+3 rows in set (0.00 sec)
+
+mysql> select id,email from stdtable;
++----+-------------------+
+| id | email             |
++----+-------------------+
+|  1 | lavish@gmail.com  |
+|  2 | magesh@gmail.com  |
+|  3 | dhanush@gmail.com |
++----+-------------------+
+3 rows in set (0.00 sec)
+
+mysql> update stdtable set username="magesg345" where id=2;
+Query OK, 1 row affected (0.01 sec)
+Rows matched: 1  Changed: 1  Warnings: 0
+
+mysql> select * from stdtable;
++----+------------+-------------------+
+| id | username   | email             |
++----+------------+-------------------+
+|  1 | lavish123  | lavish@gmail.com  |
+|  2 | magesg345  | magesh@gmail.com  |
+|  3 | dhanush123 | dhanush@gmail.com |
++----+------------+-------------------+
+3 rows in set (0.00 sec)
+
+mysql> delete  from  stdtable where  id=2;
+Query OK, 1 row affected (0.01 sec)
+
+mysql> select * from stdtable;
++----+------------+-------------------+
+| id | username   | email             |
++----+------------+-------------------+
+|  1 | lavish123  | lavish@gmail.com  |
+|  3 | dhanush123 | dhanush@gmail.com |
++----+------------+-------------------+
+2 rows in set (0.00 sec)
+
+mysql> create table stdtable1(
+    -> rollno integer,
+    -> name char(10),
+    -> class integer,
+    -> marks integer);
+Query OK, 0 rows affected (0.04 sec)
+
+mysql> show tables;
++------------------+
+| Tables_in_jfs6db |
++------------------+
+| stdtable         |
+| stdtable1        |
++------------------+
+2 rows in set (0.00 sec)
+
+mysql> insert into stdtable1
+    -> values(101,"ramya",6,85
+    -> ),
+    -> (102,"aline",6,89),
+    -> (103,"niruj",6,93),
+    -> (104,"panner",6,76);
+Query OK, 4 rows affected (0.01 sec)
+Records: 4  Duplicates: 0  Warnings: 0
+
+mysql> select * from stdtable1;
++--------+----------+-------+-------+
+| rollno | name     | class | marks |
++--------+----------+-------+-------+
+|    101 | ramya    |     6 |    85 |
+|    102 | aline    |     6 |    89 |
+|    103 | niruj    |     6 |    93 |
+|    104 | panner   |     6 |    76 |
+|    105 | nischita |     6 |    95 |
+|    106 | pavithra |     6 |    88 |
+|    107 | bharat   |     6 |    73 |
+|    108 | vishal   |     6 |    76 |
++--------+----------+-------+-------+
+8 rows in set (0.00 sec)
+
+mysql> update stdtabl1 marks=99 where rollno=1;
+ERROR 1064 (42000): You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '=99 where rollno=1' at line 1
+mysql> update stdtable1 marks=99 where rollno=1;
+ERROR 1064 (42000): You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '=99 where rollno=1' at line 1
+mysql> update stdtable1 set marks=99 where rollno=1;
+Query OK, 0 rows affected (0.00 sec)
+Rows matched: 0  Changed: 0  Warnings: 0
+
+mysql> select * from stdtable1;
++--------+----------+-------+-------+
+| rollno | name     | class | marks |
++--------+----------+-------+-------+
+|    101 | ramya    |     6 |    85 |
+|    102 | aline    |     6 |    89 |
+|    103 | niruj    |     6 |    93 |
+|    104 | panner   |     6 |    76 |
+|    105 | nischita |     6 |    95 |
+|    106 | pavithra |     6 |    88 |
+|    107 | bharat   |     6 |    73 |
+|    108 | vishal   |     6 |    76 |
++--------+----------+-------+-------+
+8 rows in set (0.00 sec)
+
+mysql> update stdtabl1 marks=99 where rollno=101;
+ERROR 1064 (42000): You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '=99 where rollno=101' at line 1
+mysql> update stdtabl1 set marks=99 where rollno=101;
+ERROR 1146 (42S02): Table 'jfs6db.stdtabl1' doesn't exist
+mysql> update stdtable1 set marks=99 where rollno=101;
+Query OK, 1 row affected (0.01 sec)
+Rows matched: 1  Changed: 1  Warnings: 0
+
+mysql> select * from stdtable1;
++--------+----------+-------+-------+
+| rollno | name     | class | marks |
++--------+----------+-------+-------+
+|    101 | ramya    |     6 |    99 |
+|    102 | aline    |     6 |    89 |
+|    103 | niruj    |     6 |    93 |
+|    104 | panner   |     6 |    76 |
+|    105 | nischita |     6 |    95 |
+|    106 | pavithra |     6 |    88 |
+|    107 | bharat   |     6 |    73 |
+|    108 | vishal   |     6 |    76 |
++--------+----------+-------+-------+
+8 rows in set (0.00 sec)
+
+mysql> delete from stdtable1 where rollno=104;
+Query OK, 1 row affected (0.01 sec)
+
+mysql> select * from stdtable1;
++--------+----------+-------+-------+
+| rollno | name     | class | marks |
++--------+----------+-------+-------+
+|    101 | ramya    |     6 |    99 |
+|    102 | aline    |     6 |    89 |
+|    103 | niruj    |     6 |    93 |
+|    105 | nischita |     6 |    95 |
+|    106 | pavithra |     6 |    88 |
+|    107 | bharat   |     6 |    73 |
+|    108 | vishal   |     6 |    76 |
++--------+----------+-------+-------+
+7 rows in set (0.00 sec)
+
+mysql> alter table stdtabl1 add column gender char(1);
+ERROR 1146 (42S02): Table 'jfs6db.stdtabl1' doesn't exist
+mysql> alter table stdtable1 add column gender char(1);
+Query OK, 0 rows affected (0.03 sec)
+Records: 0  Duplicates: 0  Warnings: 0
+
+mysql> describe stdtable1;
++--------+----------+------+-----+---------+-------+
+| Field  | Type     | Null | Key | Default | Extra |
++--------+----------+------+-----+---------+-------+
+| rollno | int      | YES  |     | NULL    |       |
+| name   | char(10) | YES  |     | NULL    |       |
+| class  | int      | YES  |     | NULL    |       |
+| marks  | int      | YES  |     | NULL    |       |
+| gender | char(1)  | YES  |     | NULL    |       |
++--------+----------+------+-----+---------+-------+
+5 rows in set (0.00 sec)
+
+mysql> alter table stdtable1 modify column class varchar(10);
+Query OK, 7 rows affected (0.06 sec)
+Records: 7  Duplicates: 0  Warnings: 0
+
+mysql> describe stdtable1;
++--------+-------------+------+-----+---------+-------+
+| Field  | Type        | Null | Key | Default | Extra |
++--------+-------------+------+-----+---------+-------+
+| rollno | int         | YES  |     | NULL    |       |
+| name   | char(10)    | YES  |     | NULL    |       |
+| class  | varchar(10) | YES  |     | NULL    |       |
+| marks  | int         | YES  |     | NULL    |       |
+| gender | char(1)     | YES  |     | NULL    |       |
++--------+-------------+------+-----+---------+-------+
+5 rows in set (0.00 sec)
+
+mysql> alter table stdtable1 change column name fullname varchar(50);
+Query OK, 7 rows affected (0.06 sec)
+Records: 7  Duplicates: 0  Warnings: 0
+
+mysql> describe stdtable1;
++----------+-------------+------+-----+---------+-------+
+| Field    | Type        | Null | Key | Default | Extra |
++----------+-------------+------+-----+---------+-------+
+| rollno   | int         | YES  |     | NULL    |       |
+| fullname | varchar(50) | YES  |     | NULL    |       |
+| class    | varchar(10) | YES  |     | NULL    |       |
+| marks    | int         | YES  |     | NULL    |       |
+| gender   | char(1)     | YES  |     | NULL    |       |
++----------+-------------+------+-----+---------+-------+
+5 rows in set (0.00 sec)
+
+mysql> select * from stdtable1;
++--------+----------+-------+-------+--------+
+| rollno | fullname | class | marks | gender |
++--------+----------+-------+-------+--------+
+|    101 | ramya    | 6     |    99 | NULL   |
+|    102 | aline    | 6     |    89 | NULL   |
+|    103 | niruj    | 6     |    93 | NULL   |
+|    105 | nischita | 6     |    95 | NULL   |
+|    106 | pavithra | 6     |    88 | NULL   |
+|    107 | bharat   | 6     |    73 | NULL   |
+|    108 | vishal   | 6     |    76 | NULL   |
++--------+----------+-------+-------+--------+
+7 rows in set (0.00 sec)
+
+mysql> alter table stdtable1 drop column gender;
+Query OK, 0 rows affected (0.02 sec)
+Records: 0  Duplicates: 0  Warnings: 0
+
+mysql> select * from stdtable1;
++--------+----------+-------+-------+
+| rollno | fullname | class | marks |
++--------+----------+-------+-------+
+|    101 | ramya    | 6     |    99 |
+|    102 | aline    | 6     |    89 |
+|    103 | niruj    | 6     |    93 |
+|    105 | nischita | 6     |    95 |
+|    106 | pavithra | 6     |    88 |
+|    107 | bharat   | 6     |    73 |
+|    108 | vishal   | 6     |    76 |
++--------+----------+-------+-------+
+7 rows in set (0.00 sec)
+
+mysql> alter table stdtable1 add primary key(rollno);
+Query OK, 0 rows affected (0.12 sec)
+Records: 0  Duplicates: 0  Warnings: 0
+
+mysql> describe stdtable1;
++----------+-------------+------+-----+---------+-------+
+| Field    | Type        | Null | Key | Default | Extra |
++----------+-------------+------+-----+---------+-------+
+| rollno   | int         | NO   | PRI | NULL    |       |
+| fullname | varchar(50) | YES  |     | NULL    |       |
+| class    | varchar(10) | YES  |     | NULL    |       |
+| marks    | int         | YES  |     | NULL    |       |
++----------+-------------+------+-----+---------+-------+
+4 rows in set (0.00 sec)
+
+mysql> select avg(marks) as averagemarks from stdtable1;
++--------------+
+| averagemarks |
++--------------+
+|      87.5714 |
++--------------+
+1 row in set (0.01 sec)
+
+mysql> alter table stdtable1 to students;
+ERROR 1064 (42000): You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'to students' at line 1
+mysql> alter table stdtable1 renmae to students;
+ERROR 1064 (42000): You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'renmae to students' at line 1
+mysql> alter table stdtable1 rename to students;
+Query OK, 0 rows affected (0.02 sec)
+
+mysql> select * from students;
++--------+----------+-------+-------+
+| rollno | fullname | class | marks |
++--------+----------+-------+-------+
+|    101 | ramya    | 6     |    99 |
+|    102 | aline    | 6     |    89 |
+|    103 | niruj    | 6     |    93 |
+|    105 | nischita | 6     |    95 |
+|    106 | pavithra | 6     |    88 |
+|    107 | bharat   | 6     |    73 |
+|    108 | vishal   | 6     |    76 |
++--------+----------+-------+-------+
+7 rows in set (0.00 sec)
+
+mysql> select * from students where marks>80;
++--------+----------+-------+-------+
+| rollno | fullname | class | marks |
++--------+----------+-------+-------+
+|    101 | ramya    | 6     |    99 |
+|    102 | aline    | 6     |    89 |
+|    103 | niruj    | 6     |    93 |
+|    105 | nischita | 6     |    95 |
+|    106 | pavithra | 6     |    88 |
++--------+----------+-------+-------+
+5 rows in set (0.00 sec)
+
+mysql> select * from students order by marks desc;
++--------+----------+-------+-------+
+| rollno | fullname | class | marks |
++--------+----------+-------+-------+
+|    101 | ramya    | 6     |    99 |
+|    105 | nischita | 6     |    95 |
+|    103 | niruj    | 6     |    93 |
+|    102 | aline    | 6     |    89 |
+|    106 | pavithra | 6     |    88 |
+|    108 | vishal   | 6     |    76 |
+|    107 | bharat   | 6     |    73 |
++--------+----------+-------+-------+
+7 rows in set (0.00 sec)
+
+mysql> select * from students where fullname like 'n%';
++--------+----------+-------+-------+
+| rollno | fullname | class | marks |
++--------+----------+-------+-------+
+|    103 | niruj    | 6     |    93 |
+|    105 | nischita | 6     |    95 |
++--------+----------+-------+-------+
+2 rows in set (0.00 sec)
+
+mysql> select * from students  order  by marks desc limit 2;
++--------+----------+-------+-------+
+| rollno | fullname | class | marks |
++--------+----------+-------+-------+
+|    101 | ramya    | 6     |    99 |
+|    105 | nischita | 6     |    95 |
++--------+----------+-------+-------+
+2 rows in set (0.00 sec)
+
+mysql> select * from students;
++--------+----------+-------+-------+
+| rollno | fullname | class | marks |
++--------+----------+-------+-------+
+|    101 | ramya    | 6     |    99 |
+|    102 | aline    | 6     |    89 |
+|    103 | niruj    | 6     |    93 |
+|    105 | nischita | 6     |    95 |
+|    106 | pavithra | 6     |    88 |
+|    107 | bharat   | 6     |    73 |
+|    108 | vishal   | 6     |    76 |
++--------+----------+-------+-------+
+7 rows in set (0.00 sec)
+
+mysql> select * from students where class=6 and marks between 80 and 90;
++--------+----------+-------+-------+
+| rollno | fullname | class | marks |
++--------+----------+-------+-------+
+|    102 | aline    | 6     |    89 |
+|    106 | pavithra | 6     |    88 |
++--------+----------+-------+-------+
+2 rows in set (0.01 sec)
+
+mysql> select * from students ;
++--------+----------+-------+-------+
+| rollno | fullname | class | marks |
++--------+----------+-------+-------+
+|    101 | ramya    | 6     |    99 |
+|    102 | aline    | 6     |    89 |
+|    103 | niruj    | 6     |    93 |
+|    105 | nischita | 6     |    95 |
+|    106 | pavithra | 6     |    88 |
+|    107 | bharat   | 6     |    73 |
+|    108 | vishal   | 6     |    76 |
+|    109 | lavish   | 8     |    95 |
+|    110 | pavan    | 8     |    88 |
+|    111 | suman    | 8     |    73 |
+|    112 | swapnil  | 8     |    76 |
++--------+----------+-------+-------+
+11 rows in set (0.00 sec)
+
+mysql> select class, count(*) as count_students from students group by class;
++-------+----------------+
+| class | count_students |
++-------+----------------+
+| 6     |              7 |
+| 8     |              4 |
++-------+----------------+
+2 rows in set (0.01 sec)
+
+mysql> alter table students add column city varchar(50);
+Query OK, 0 rows affected (0.03 sec)
+Records: 0  Duplicates: 0  Warnings: 0
+
+mysql> select * from students;
++--------+----------+-------+-------+------+
+| rollno | fullname | class | marks | city |
++--------+----------+-------+-------+------+
+|    101 | ramya    | 6     |    99 | NULL |
+|    102 | aline    | 6     |    89 | NULL |
+|    103 | niruj    | 6     |    93 | NULL |
+|    105 | nischita | 6     |    95 | NULL |
+|    106 | pavithra | 6     |    88 | NULL |
+|    107 | bharat   | 6     |    73 | NULL |
+|    108 | vishal   | 6     |    76 | NULL |
+|    109 | lavish   | 8     |    95 | NULL |
+|    110 | pavan    | 8     |    88 | NULL |
+|    111 | suman    | 8     |    73 | NULL |
+|    112 | swapnil  | 8     |    76 | NULL |
++--------+----------+-------+-------+------+
+11 rows in set (0.00 sec)
+
+mysql> update students set city="hyderabad" where rollno=101;
+Query OK, 1 row affected (0.01 sec)
+Rows matched: 1  Changed: 1  Warnings: 0
+
+mysql> select * from students;
++--------+----------+-------+-------+-----------+
+| rollno | fullname | class | marks | city      |
++--------+----------+-------+-------+-----------+
+|    101 | ramya    | 6     |    99 | hyderabad |
+|    102 | aline    | 6     |    89 | hyderabad |
+|    103 | niruj    | 6     |    93 | NULL      |
+|    105 | nischita | 6     |    95 | NULL      |
+|    106 | pavithra | 6     |    88 | NULL      |
+|    107 | bharat   | 6     |    73 | NULL      |
+|    108 | vishal   | 6     |    76 | NULL      |
+|    109 | lavish   | 8     |    95 | NULL      |
+|    110 | pavan    | 8     |    88 | NULL      |
+|    111 | suman    | 8     |    73 | NULL      |
+|    112 | swapnil  | 8     |    76 | NULL      |
++--------+----------+-------+-------+-----------+
+11 rows in set (0.00 sec)
+
+mysql> update students set city="chennai" where rollno=103;
+Query OK, 1 row affected (0.01 sec)
+Rows matched: 1  Changed: 1  Warnings: 0
+
+mysql> select * from students;
++--------+----------+-------+-------+-----------+
+| rollno | fullname | class | marks | city      |
++--------+----------+-------+-------+-----------+
+|    101 | ramya    | 6     |    99 | hyderabad |
+|    102 | aline    | 6     |    89 | hyderabad |
+|    103 | niruj    | 6     |    93 | chennai   |
+|    105 | nischita | 6     |    95 | NULL      |
+|    106 | pavithra | 6     |    88 | NULL      |
+|    107 | bharat   | 6     |    73 | NULL      |
+|    108 | vishal   | 6     |    76 | NULL      |
+|    109 | lavish   | 8     |    95 | NULL      |
+|    110 | pavan    | 8     |    88 | NULL      |
+|    111 | suman    | 8     |    73 | NULL      |
+|    112 | swapnil  | 8     |    76 | NULL      |
++--------+----------+-------+-------+-----------+
+11 rows in set (0.00 sec)
+
+mysql> insert into students(rollno,funname,class,marks,city) values(113,'Swapnil',11,97,Nagpur);
+ERROR 1054 (42S22): Unknown column 'funname' in 'field list'
+mysql> insert into students(rollno,fullname,class,marks,city) values(113,'Swapnil',11,97,Nagpur);
+ERROR 1054 (42S22): Unknown column 'Nagpur' in 'field list'
+mysql> insert into students(rollno,fullname,class,marks,city) values(113,'Swapnil',11,97,'Nagpur');
+Query OK, 1 row affected (0.01 sec)
+
+mysql> select * from students;
++--------+----------+-------+-------+-----------+
+| rollno | fullname | class | marks | city      |
++--------+----------+-------+-------+-----------+
+|    101 | ramya    | 6     |    99 | hyderabad |
+|    102 | aline    | 6     |    89 | hyderabad |
+|    103 | niruj    | 6     |    93 | chennai   |
+|    105 | nischita | 6     |    95 | NULL      |
+|    106 | pavithra | 6     |    88 | NULL      |
+|    107 | bharat   | 6     |    73 | NULL      |
+|    108 | vishal   | 6     |    76 | NULL      |
+|    109 | lavish   | 8     |    95 | NULL      |
+|    110 | pavan    | 8     |    88 | NULL      |
+|    111 | suman    | 8     |    73 | NULL      |
+|    112 | swapnil  | 8     |    76 | NULL      |
+|    113 | Swapnil  | 11    |    97 | Nagpur    |
++--------+----------+-------+-------+-----------+
+12 rows in set (0.00 sec)
+
+mysql> select fullname from students;
++----------+
+| fullname |
++----------+
+| ramya    |
+| aline    |
+| niruj    |
+| nischita |
+| pavithra |
+| bharat   |
+| vishal   |
+| lavish   |
+| pavan    |
+| suman    |
+| swapnil  |
+| Swapnil  |
++----------+
+12 rows in set (0.00 sec)
+
+mysql> select fullname,city from students order by city asc;
++----------+-----------+
+| fullname | city      |
++----------+-----------+
+| nischita | NULL      |
+| pavithra | NULL      |
+| bharat   | NULL      |
+| vishal   | NULL      |
+| lavish   | NULL      |
+| pavan    | NULL      |
+| suman    | NULL      |
+| swapnil  | NULL      |
+| niruj    | chennai   |
+| ramya    | hyderabad |
+| aline    | hyderabad |
+| Swapnil  | Nagpur    |
++----------+-----------+
+12 rows in set (0.01 sec)
+
+mysql> delete from students where rollno=109;
+Query OK, 1 row affected (0.01 sec)
+
+mysql> select * from students;
++--------+----------+-------+-------+-----------+
+| rollno | fullname | class | marks | city      |
++--------+----------+-------+-------+-----------+
+|    101 | ramya    | 6     |    99 | hyderabad |
+|    102 | aline    | 6     |    89 | hyderabad |
+|    103 | niruj    | 6     |    93 | chennai   |
+|    105 | nischita | 6     |    95 | NULL      |
+|    106 | pavithra | 6     |    88 | NULL      |
+|    107 | bharat   | 6     |    73 | NULL      |
+|    108 | vishal   | 6     |    76 | NULL      |
+|    110 | pavan    | 8     |    88 | NULL      |
+|    111 | suman    | 8     |    73 | NULL      |
+|    112 | swapnil  | 8     |    76 | NULL      |
+|    113 | Swapnil  | 11    |    97 | Nagpur    |
++--------+----------+-------+-------+-----------+
+11 rows in set (0.00 sec)
+
+mysql> delete from students where marks<75;
+Query OK, 2 rows affected (0.01 sec)
+
+mysql> select * from students;
++--------+----------+-------+-------+-----------+
+| rollno | fullname | class | marks | city      |
++--------+----------+-------+-------+-----------+
+|    101 | ramya    | 6     |    99 | hyderabad |
+|    102 | aline    | 6     |    89 | hyderabad |
+|    103 | niruj    | 6     |    93 | chennai   |
+|    105 | nischita | 6     |    95 | NULL      |
+|    106 | pavithra | 6     |    88 | NULL      |
+|    108 | vishal   | 6     |    76 | NULL      |
+|    110 | pavan    | 8     |    88 | NULL      |
+|    112 | swapnil  | 8     |    76 | NULL      |
+|    113 | Swapnil  | 11    |    97 | Nagpur    |
++--------+----------+-------+-------+-----------+
+9 rows in set (0.00 sec)
+
+mysql> delete from students where city="hyderabad";
+Query OK, 2 rows affected (0.01 sec)
+
+mysql> select * from students;
++--------+----------+-------+-------+---------+
+| rollno | fullname | class | marks | city    |
++--------+----------+-------+-------+---------+
+|    103 | niruj    | 6     |    93 | chennai |
+|    105 | nischita | 6     |    95 | NULL    |
+|    106 | pavithra | 6     |    88 | NULL    |
+|    108 | vishal   | 6     |    76 | NULL    |
+|    110 | pavan    | 8     |    88 | NULL    |
+|    112 | swapnil  | 8     |    76 | NULL    |
+|    113 | Swapnil  | 11    |    97 | Nagpur  |
++--------+----------+-------+-------+---------+
+7 rows in set (0.00 sec)
+
+mysql> delete from  students;
+Query OK, 7 rows affected (0.01 sec)
+
+mysql> select * from students;
+Empty set (0.00 sec)
+
+mysql> describe students;
++----------+-------------+------+-----+---------+-------+
+| Field    | Type        | Null | Key | Default | Extra |
++----------+-------------+------+-----+---------+-------+
+| rollno   | int         | NO   | PRI | NULL    |       |
+| fullname | varchar(50) | YES  |     | NULL    |       |
+| class    | varchar(10) | YES  |     | NULL    |       |
+| marks    | int         | YES  |     | NULL    |       |
+| city     | varchar(50) | YES  |     | NULL    |       |
++----------+-------------+------+-----+---------+-------+
+5 rows in set (0.00 sec)
+
+mysql> drop table students;
+Query OK, 0 rows affected (0.02 sec)
+
+mysql> select * from students;
+ERROR 1146 (42S02): Table 'jfs6db.students' doesn't exist
+mysql>

@@ -1,0 +1,240 @@
+[Employee data->
+Salary of employee]
+
+Name Salary 
+ 
+
+Collections Frame-Group
+
+Java Streams->
+filtering,mapping ,sorting with chain or group 
+of data.
+
+
+interface->functional interface->
+getLength()=>define
+
+class->calculate length of it
+Lavish->6
+
+
+1.st ->
+creating interface, creating class ,object and then calling method()
+
+2nd->Anonymous class
+without name
+
+
+3.Implementing using lambda expression
+Streams API->
+Java.util.streams->process a object from collection data and want to represent
+as stream of object with  chaining of methods.
+
+java.io.streams->process binary or file.
+
+Collection-> representation group of single object as single entity ->
+Collection 
+
+
+Stream->process for further for logical requirement
+->We should use streams.
+
+
+
+deafult Stream stream()
+
+
+
+
+
+Day Agenda:
+Java-8 Version
+OOPS->Functional Programming 
+Intro to Functional Programming
+Streams API->Collection API
+lambda expressions->method,functions
+->
+develop lambda-
+Anonymous class->without any name
+Functional interfaces->one abstract method.
+abstract method->
+m1,m2,m3->abstract-> class->
+Data & Time API
+Method references
+Optional Class
+Predicate
+
+
+Lamda,functional interface,Streams()
+
+Date and Time API,Method reference ,Optional Class ,Predicate
+
+
+1.Lambda Expression->comes maths ->
+reduce your programming code-it is to acheive writing of function in your program to acheive ->
+Functional programming.
+
+
+20->Normal.
+5-7->lambda
+
+nameless function->
+()->{
+
+}
+
+Functional interface are interface which contains only 1 abstract method.
+if you declare more than 1 abstract method->Compile error.
+
+Funcational interface->
+Lambda expression->lambda with arrow operator:
+symbol-> ->
+doesn't have any method name
+without any name
+access specifier,
+
+
+Functional interface->Lambda expression.
+With collection->
+TO over come Limitation of Collection and array group of data
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Java-8->Functional orientied.
+
+
+
+
+
+
+
+package com.streamconcepts1;
+
+import java.util.ArrayList;
+import java.util.List;
+import java.util.Map;
+import java.util.stream.Collectors;
+
+public class StreamMain1 {
+	private static List<Product> pl=new ArrayList<Product>();
+
+	public static void main(String[] args) {
+		//static of list of product
+		//add
+		pl.add(new Product(101, "Samsung", 25000f));
+		pl.add(new Product(102, "Vivo", 15000f));
+		pl.add(new Product(103, "Xiaomi", 18000f));
+		pl.add(new Product(104, "Sony", 35000f));
+		pl.add(new Product(105, "Nokia", 55000f));
+		
+//		callproductwithoutstream();
+//		callproductwithstream();
+		//convert product list to map
+		Map<Integer, String> productpricemapping=pl.stream() 
+				.collect(Collectors.toMap(p->p.getId(), p->p.getName()));
+		System.out.println(productpricemapping);
+	}
+	
+	//create 2 static ->
+//	apply filtering of the product where lets price 20000>
+	private static void callproductwithoutstream() {
+		//create a list of float type 
+		List<Float> productpricel=new ArrayList<Float>();	
+		//filter ->added to list
+		for(Product p:pl) {
+			if(p.getPrice()>20000) {
+				//add product to List
+				productpricel.add(p.getPrice());
+			}
+		}	
+		//display
+		for(Float price:productpricel) {
+			System.out.println(price);
+		}
+	}
+	
+	//apply filtering of the product where lets price 20000>
+	private static void callproductwithstream() {
+		List<Float> productpricelist=pl.stream()
+				.filter((product)->product.getPrice()>20000)
+				.map((product)->product.getPrice())
+				.collect(Collectors.toList());
+		
+		productpricelist.forEach((price)->System.out.println(price));
+	}
+	//Convert List to map
+	
+
+}
+
+package com.streamconcepts1;
+
+public class Product {
+	
+	//fields
+	private int id;
+	private String name;
+	private float price;
+//	alt+shift+s
+	public Product(int id, String name, float price) {
+		super();
+		this.id = id;
+		this.name = name;
+		this.price = price;
+	}
+	public int getId() {
+		return id;
+	}
+	public void setId(int id) {
+		this.id = id;
+	}
+	public String getName() {
+		return name;
+	}
+	public void setName(String name) {
+		this.name = name;
+	}
+	public float getPrice() {
+		return price;
+	}
+	public void setPrice(float price) {
+		this.price = price;
+	}
+	@Override
+	public String toString() {
+		return "Product [id=" + id + ", name=" + name + ", price=" + price + "]";
+	}
+	
+}
+
+

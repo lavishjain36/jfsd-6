@@ -1,0 +1,115 @@
+Scanner->class to read the input from the user using keyboard.
+package->java.util package.
+
+java.util.Scanner->
+Scanner->Class->
+int ->nextInt()
+float->nextFloat();
+double->nextDouble();
+string->
+one word->lavish->next()->to read the text.
+one line ->Lavish Jain->nextLine()->it will read the complete untill
+cursor reaches to next line.
+
+
+== (check the address of memory) and .equals->content (value)
+String Class->
+
+
+String name1="hello";
+String name2="hello";
+
+
+email:-> lavish@gmail.com
+password->admin123
+
+
+comments
+
+output
+
+writing code properly -java naming convention
+
+100-200->
+operator,control statement.
+
+
+
+250-300 problems.
+Day:Agenda
+Control Statement and Branching:
+Conditional statement->decision 
+if,if-else,if-else-ladder,nested if,Switch case
+
+Iteration Statment->Looping->for loop,while loop,do-while,for each loop.
+
+Jump Statement->
+break->it is keyword which stops execution of program.
+
+1 to 10->5->break.=>6,7,8,9,10
+
+continue->
+ 1 to 10->skip a part of number
+->my number is 5->continue;
+1 to 10 except 5
+
+
+
+
+
+
+
+beach-option-1
+Mountain->Option-2
+crowded city->Option-3
+
+
+Male->
+Female->
+Q1-
+Code
+package com.branching;
+
+public class Pattern1 {
+		//comments also
+	public static void main(String[] args) {
+		int n=10;
+		for(int i=0;i<=n;i++) {
+			System.out.print("*");
+		}
+	}
+
+}
+
+Output:
+Input :5
+output*****
+
+
+package com.branching;
+
+public class Pattern2 {
+
+	public static void main(String[] args) {
+		//While loop
+		int i=5;//intialization
+		int n=5;
+		//condition checked
+		while(i<n) {
+			System.out.print("*");//body
+			//incrementation
+			i++;//updation
+		}
+	}
+}
+
+Input:
+Output:
+
+
+
+
+
+
+
+

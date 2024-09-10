@@ -1,0 +1,50 @@
+Spring Boot +Thymeleaf +Database Integration(MYSQL)
+
+What is Thymeleaf ?
+
+Thymeleaf template
+Basic syntax and features
+Thymeleaf Template Engine->Working
+Spring->MVC controller->JSP
+JSP vs Thymeleaf
+
+Implementation->
+Adding dependency 
+Implement ->
+
+Product entity->id,name,price,category.
+1 mobile 20000  electronics
+2 laptop   80000  electronics
+3.t-shirt    1500    clothes
+
+productService
+1.get all the product by category->get
+2.to store the product in db(mysql)->post
+3.get all the product.->get
+
+
+
+Basic features:
+using below expression->th:
+1.variable expression-> ${expression name}
+<p>th:text="${user.name}"</span>
+2.Forms->Spring->
+  Selection expression-> *{}
+3.Message expression-> #{}
+4.Link expression .url-Link->   @{}
+
+Iteration-> th:each->List of product/item
+Form->
+th:field 
+th:error
+
+
+
+Spring Boot -it amis to develop web application with thymleaf template.
+1.Spring boot starter project
+2.Add maven dependency:
+Spring web->spring-boot-starter-web
+Thymeleaf->Spring-boot-starter-thymleaf
+
+
+https://excalidraw.com/#json=VDGqQiDgIO2Hwd4WR0nQH,_Lp82R4zEfnGwvm8KiK2dQ

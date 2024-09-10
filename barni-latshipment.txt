@@ -1,0 +1,77 @@
+Java->technical Round Java
+
+Barni->Technical->
+Try with analogy-with example usecase
+
+Inheritance in java:
+usecase:
+Bank Account->
+Inheritance:
+
+Father->1crocre
+Barni->Software Organization+1crore
+Child->Transferred
+
+Overloading vs overrding
+Architecture of java internally->
+
+Best of practice of writing code:
+
+
+String Constant pool->
+String vs String Buffer vs String Builder
+
+
+
+
+Project->WOrked on?
+
+Use case with completed implemented
+
+
+Design Pattern->?
+MVC,Webflux
+
+
+Collection Framework->
+Java-8 to 17
+
+
+
+Java-8->Java Stream API->
+Complete Stream API methods->
+
+couple of method-10
+
+
+Functional vs object oriented-?
+
+stream api,lamdba and method reference.
+
+
+Multithreading->
+lifecycle of multi threading->
+yield start run
+
+Java-9 to 17 -
+
+var
+switch expression
+Reactor 
+Sealed classes
+JShell
+method reference
+lamda expression.
+Records
+
+
+Java-21 version->
+
+
+System Design->
+1.Vending machine
+2.Parking lot problem
+
+
+
+Spring ecosystem-
